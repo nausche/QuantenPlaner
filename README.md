@@ -1,2 +1,89 @@
-# QuantenPlaner
-Planer für Quantum-Invasion FOE
+============================================================
+           QUANTUM-PLANER - FORGE OF EMPIRES
+============================================================
+Version: 1.5
+Kategorie: Interaktiver Guide & Utility
+============================================================
+
+Dieses Tool ist eine interaktive Schritt-für-Schritt-Anleitung 
+für die Quanten-Invasionen (QI) in Forge of Empires. 
+Es hilft dabei, den optimalen Aufbau der Siedlung effizient 
+und fehlerfrei umzusetzen.
+
+------------------------------------------------------------
+CHANGELOG / VERSIONSHISTORIE
+------------------------------------------------------------
+
+### NEU IN VERSION 1.5
+* INTELLIGENTE MANUELLE AUSWAHL (1:1 PROPAGATION):
+  Gebäude in manuellen Slots werden nun 1:1 in alle folgenden 
+  Schritte übernommen. Einmal planen – die ganze Saison nutzen!
+* VEREINFACHTE BEDIENUNG (QUICK-CLEAR):
+  Rotes "✖"-Symbol zum sofortigen Leeren eines Slots. 
+  Entschlacktes UI für maximale Geschwindigkeit.
+* AUTOMATISCHE ABRISS-REFUNDS FÜR EXTRAS:
+  Rückgewinn-Berechnung nun auch für manuelle Gebäudeanpassungen 
+  in der Ernte-Prognose.
+* VISUELLE STATUS-MARKER:
+  Farbige Leisten am linken Rand (Grün: Bau, Rot: Abriss, 
+  Gelb: Timer) zur schnellen Orientierung.
+* OPTIMIERTES LAYOUT & SCROLL-FIX:
+  Bessere Positionierung der Baupläne und Ernteinfos sowie 
+  Fix der Scroll-Position bei Auswahländerungen.
+* KUMULATIVE ERNTE-BERECHNUNG:
+  Präzise Summierung aller Guide-Gebäude und manuellen Extras 
+  über alle Schritte hinweg.
+
+### FEATURES AUS VERSION 1.4
+* INTERAKTIVE ERNTE-PROGNOSE:
+  Anzeige der zu erwartenden Ernte inkl. Rückgewinnung aus 
+  Abrissen am Ende jedes Schrittes.
+* DETAIL-TOOLTIPS (HOVER):
+  Genaue Aufschlüsselung der Produktionswerte (z.B. AAP/h) 
+  beim Überfahren der Icons.
+* NEUES CLICK-TO-COMPLETE SYSTEM:
+  Checklisten-Handling per Direktklick auf die Anweisungen 
+  für ein moderneres Bediengefühl.
+* OPTIMIERTES AKTIONSPUNKTE-FORMAT:
+  Umstellung auf das intuitive "+X/h" Format für Aktionspunkte.
+
+### FEATURES AUS VERSION 1.3
+* SIDE PANEL INTEGRATION:
+  Die Erweiterung öffnet sich nun nativ im Chrome Side Panel 
+  statt in einem separaten Popup.
+* THEME SUPPORT (DARK/LIGHT):
+  Implementierung von Dark- und Light-Mode mit automatischer 
+  Speicherung der Nutzer-Präferenz.
+* 17-SCHRITTE MASTERPLAN:
+  Vollständiger Guide für alle 17 Phasen des Mittelalter-Aufbaus.
+* INTERAKTIVE MODAL-VORSCHAU:
+  Klickbare Baupläne mit hochauflösender Vollbild-Ansicht 
+  zur besseren Orientierung.
+
+------------------------------------------------------------
+BEWÄHRTE FUNKTIONEN
+------------------------------------------------------------
+
+1. STATUS-SPEICHERUNG:
+   Der Planer merkt sich deinen Fortschritt und deine 
+   Einstellungen (Theme/Schritt) auch nach dem Schließen.
+
+2. TIMER & NOTIFICATIONS:
+   Icon-Badge in der Toolbar und Desktop-Meldungen informieren 
+   dich zuverlässig über abgelaufene Wartezeiten.
+
+3. FLEXIBLE NAVIGATION:
+   Schneller Wechsel zwischen allen Phasen über das 
+   Dropdown-Menü oder die "Nächster Schritt"-Buttons.
+
+------------------------------------------------------------
+INSTALLATION
+------------------------------------------------------------
+
+1. Entpacke das ZIP-Archiv in einen Ordner.
+2. Öffne Google Chrome -> 'chrome://extensions/'.
+3. Aktiviere den "Entwicklermodus".
+4. Klicke auf "Entpackte Erweiterung laden" und wähle den Ordner.
+
+Viel Erfolg bei den Invasionen!
+============================================================

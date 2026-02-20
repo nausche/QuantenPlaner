@@ -350,8 +350,8 @@ const steps = [
   {
     title: "SEASON",
     buildings: [
-      { img: "buildings/town_hall_29.webp", desc: "Mittelalter<br><span style='font-size:0.7em; text-transform:none'>(Minimum)</span>", id: "intro_min" },
-      { img: "buildings/town_hall_29.webp", desc: "Mittelalter<br><span style='font-size:0.7em; text-transform:none'>(Fortgeschritten)</span>", id: "intro_adv" },
+      { img: "buildings/Town_Hall_29.webp", desc: "Mittelalter<br><span style='font-size:0.7em; text-transform:none'>(Minimum)</span>", id: "intro_min" },
+      { img: "buildings/Town_Hall_29.webp", desc: "Mittelalter<br><span style='font-size:0.7em; text-transform:none'>(Fortgeschritten)</span>", id: "intro_adv" },
       { img: "icons/calc.png", desc: "Quanten-Rechner", id: "intro_calc" }
     ],
     intro: true
@@ -360,11 +360,11 @@ const steps = [
     title: "Schritt 1: Basis-Aufbau",
     buildings: [
       { img: "buildings/expansion.webp", desc: "3x Erweiterung kaufen (Quantum-Scherben)", id: "s1_b1", type: "build", buildingId: "expansion", count: 3 },
-      { img: "buildings/multistory_house.webp", desc: "3x Mehrgeschossiges Haus bauen", id: "s1_b2", type: "build", buildingId: "multistory_house", count: 3 },
-      { img: "buildings/estate_house.webp", desc: "7x Gutshaus bauen", id: "s1_b3", type: "build", buildingId: "estate_house", count: 7 },
-      { img: "buildings/brewery.webp", desc: "5x Brauerei bauen", id: "s1_b4", type: "build", buildingId: "brewery", count: 5 },
-      { img: "buildings/tannery.webp", desc: "5x Gerberei bauen", id: "s1_b5", type: "build", buildingId: "tannery", count: 5 },
-      { img: "buildings/church.webp", desc: "7x Kirche bauen", id: "s1_b6", type: "build", buildingId: "church", count: 7 }
+      { img: "buildings/Multistory_House.webp", desc: "3x Mehrgeschossiges Haus bauen", id: "s1_b2", type: "build", buildingId: "multistory_house", count: 3 },
+      { img: "buildings/Estate_House.webp", desc: "7x Gutshaus bauen", id: "s1_b3", type: "build", buildingId: "estate_house", count: 7 },
+      { img: "buildings/Brewery.webp", desc: "5x Brauerei bauen", id: "s1_b4", type: "build", buildingId: "brewery", count: 5 },
+      { img: "buildings/Tannery.webp", desc: "5x Gerberei bauen", id: "s1_b5", type: "build", buildingId: "tannery", count: 5 },
+      { img: "buildings/Church.webp", desc: "7x Kirche bauen", id: "s1_b6", type: "build", buildingId: "church", count: 7 }
     ],
     plans: ["steps/step1.jpg"]
   },
@@ -377,16 +377,16 @@ const steps = [
   {
     title: "Schritt 3: Spezialisierung",
     buildings: [
-      { img: "buildings/church.webp", desc: "1x Kirche abreißen", id: "s3_a1", special: "sell", type: "sell", buildingId: "church", count: 1 },
-      { img: "buildings/beekeeper.webp", desc: "1x Imkerei bauen", id: "s3_b1", type: "build", buildingId: "beekeeper", count: 1 },
+      { img: "buildings/Church.webp", desc: "1x Kirche abreißen", id: "s3_a1", special: "sell", type: "sell", buildingId: "church", count: 1 },
+      { img: "buildings/Beekeeper.webp", desc: "1x Imkerei bauen", id: "s3_b1", type: "build", buildingId: "beekeeper", count: 1 },
       { img: "icons/hourglass50.png", desc: "1 Stunde warten (Produktion)", id: "s3_w1", special: "wait", waitTime: 60 },
-      { img: "icons/honey.webp", desc: "12x Honig produzieren", id: "s3_p1" },
+      { img: "icons/Honey.webp", desc: "12x Honig produzieren", id: "s3_p1" },
       { img: "buildings/expansion.webp", desc: "1x Erweiterung kaufen (Güter)", id: "s3_b2", type: "build", buildingId: "expansion", count: 1 },
-      { img: "buildings/beekeeper.webp", desc: "1x Imkerei abreißen", id: "s3_a2", special: "sell", type: "sell", buildingId: "beekeeper", count: 1 },
-      { img: "buildings/mansion.webp", desc: "2x Herrenhaus bauen", id: "s3_b3", type: "build", buildingId: "mansion", count: 2 },
-      { img: "buildings/alchemist.webp", desc: "1x Alchemistenlabor bauen", id: "s3_b4", type: "build", buildingId: "alchemist", count: 1 },
-      { img: "buildings/church.webp", desc: "1x Kirche bauen", id: "s3_b5", type: "build", buildingId: "church", count: 1 },
-      { img: "buildings/gallows.webp", desc: "1x Galgen bauen", id: "s3_b6", type: "build", buildingId: "gallows", count: 1 },
+      { img: "buildings/Beekeeper.webp", desc: "1x Imkerei abreißen", id: "s3_a2", special: "sell", type: "sell", buildingId: "beekeeper", count: 1 },
+      { img: "buildings/Mansion.webp", desc: "2x Herrenhaus bauen", id: "s3_b3", type: "build", buildingId: "mansion", count: 2 },
+      { img: "buildings/Alchemist.webp", desc: "1x Alchemistenlabor bauen", id: "s3_b4", type: "build", buildingId: "alchemist", count: 1 },
+      { img: "buildings/Church.webp", desc: "1x Kirche bauen", id: "s3_b5", type: "build", buildingId: "church", count: 1 },
+      { img: "buildings/Gallows.webp", desc: "1x Galgen bauen", id: "s3_b6", type: "build", buildingId: "gallows", count: 1 },
       { img: "icons/hourglass50.png", desc: "1 Stunde warten (Bau-Abschluss)", id: "s3_w2", special: "wait", waitTime: 60 },
       { img: "icons/visit.png", desc: "Siedlung erneut besuchen", id: "s3_v1" }
     ],
@@ -396,15 +396,15 @@ const steps = [
   {
     title: "Schritt 4: Produktion & Expansion",
     buildings: [
-      { img: "buildings/tannery.webp", desc: "1x Gerberei abreißen", id: "s4_a1", special: "sell", type: "sell", buildingId: "tannery", count: 1 },
-      { img: "buildings/gunpowder.webp", desc: "1x Schießpulver-Manufaktur bauen", id: "s4_b1", type: "build", buildingId: "gunpowder", count: 1 },
+      { img: "buildings/Tannery.webp", desc: "1x Gerberei abreißen", id: "s4_a1", special: "sell", type: "sell", buildingId: "tannery", count: 1 },
+      { img: "buildings/Gunpowder.webp", desc: "1x Schießpulver-Manufaktur bauen", id: "s4_b1", type: "build", buildingId: "gunpowder", count: 1 },
       { img: "icons/hourglass50.png", desc: "1 Stunde warten (Produktion)", id: "s4_w1", special: "wait", waitTime: 60 },
-      { img: "icons/gunpowder.webp", desc: "2x 20 Schießpulver produzieren", id: "s4_p1" },
+      { img: "icons/Gunpowder.webp", desc: "2x 20 Schießpulver produzieren", id: "s4_p1" },
       { img: "buildings/expansion.webp", desc: "1x Erweiterung kaufen (Güter)", id: "s4_b2", type: "build", buildingId: "expansion", count: 1 },
-      { img: "buildings/gunpowder.webp", desc: "1x Schießpulver-Manufaktur abreißen", id: "s4_a2", special: "sell", type: "sell", buildingId: "gunpowder", count: 1 },
-      { img: "buildings/frame_house.webp", desc: "1x Fachwerkhaus bauen", id: "s4_b3", type: "build", buildingId: "frame_house", count: 1 },
-      { img: "buildings/alchemist.webp", desc: "1x Alchemistenlabor bauen", id: "s4_b4", type: "build", buildingId: "alchemist", count: 1 },
-      { img: "buildings/marketplace.webp", desc: "2x Marktplatz bauen", id: "s4_b5", type: "build", buildingId: "marketplace", count: 2 },
+      { img: "buildings/Gunpowder.webp", desc: "1x Schießpulver-Manufaktur abreißen", id: "s4_a2", special: "sell", type: "sell", buildingId: "gunpowder", count: 1 },
+      { img: "buildings/Frame_House.webp", desc: "1x Fachwerkhaus bauen", id: "s4_b3", type: "build", buildingId: "frame_house", count: 1 },
+      { img: "buildings/Alchemist.webp", desc: "1x Alchemistenlabor bauen", id: "s4_b4", type: "build", buildingId: "alchemist", count: 1 },
+      { img: "buildings/Marketplace.webp", desc: "2x Marktplatz bauen", id: "s4_b5", type: "build", buildingId: "marketplace", count: 2 },
       { img: "icons/hourglass50.png", desc: "1 Stunde warten (Bau-Abschluss)", id: "s4_w2", special: "wait", waitTime: 60 },
       { img: "icons/visit.png", desc: "Siedlung erneut besuchen", id: "s4_v1" }
     ],
@@ -413,16 +413,16 @@ const steps = [
   {
     title: "Schritt 5: Seilproduktion & Vorbereitung",
     buildings: [
-      { img: "buildings/marketplace.webp", desc: "1x Marktplatz abreißen", id: "s5_a1", special: "sell", type: "sell", buildingId: "marketplace", count: 1 },
-      { img: "buildings/ropery.webp", desc: "1x Seilerei bauen", id: "s5_b1", type: "build", buildingId: "ropery", count: 1 },
+      { img: "buildings/Marketplace.webp", desc: "1x Marktplatz abreißen", id: "s5_a1", special: "sell", type: "sell", buildingId: "marketplace", count: 1 },
+      { img: "buildings/Ropery.webp", desc: "1x Seilerei bauen", id: "s5_b1", type: "build", buildingId: "ropery", count: 1 },
       { img: "icons/hourglass50.png", desc: "1 Stunde warten (Produktion)", id: "s5_w1", special: "wait", waitTime: 60 },
-      { img: "icons/ropery.webp", desc: "4x 20 Seile produzieren", id: "s5_p1" },
+      { img: "icons/Ropery.webp", desc: "4x 20 Seile produzieren", id: "s5_p1" },
       { img: "buildings/expansion.webp", desc: "1x Erweiterung kaufen (Güter)", id: "s5_b2", type: "build", buildingId: "expansion", count: 1 },
-      { img: "buildings/ropery.webp", desc: "1x Seilerei abreißen", id: "s5_a2", special: "sell", type: "sell", buildingId: "ropery", count: 1 },
-      { img: "buildings/gallows.webp", desc: "2x Galgen bauen", id: "s5_b3", type: "build", buildingId: "gallows", count: 2 },
-      { img: "buildings/frame_house.webp", desc: "1x Fachwerkhaus bauen", id: "s5_b4", type: "build", buildingId: "frame_house", count: 1 },
-      { img: "buildings/alchemist.webp", desc: "1x Alchemistenlabor bauen", id: "s5_b5", type: "build", buildingId: "alchemist", count: 1 },
-      { img: "buildings/multistory_house.webp", desc: "1x Mehrgeschossiges Haus bauen", id: "s5_b6", type: "build", buildingId: "multistory_house", count: 1 },
+      { img: "buildings/Ropery.webp", desc: "1x Seilerei abreißen", id: "s5_a2", special: "sell", type: "sell", buildingId: "ropery", count: 1 },
+      { img: "buildings/Gallows.webp", desc: "2x Galgen bauen", id: "s5_b3", type: "build", buildingId: "gallows", count: 2 },
+      { img: "buildings/Frame_House.webp", desc: "1x Fachwerkhaus bauen", id: "s5_b4", type: "build", buildingId: "frame_house", count: 1 },
+      { img: "buildings/Alchemist.webp", desc: "1x Alchemistenlabor bauen", id: "s5_b5", type: "build", buildingId: "alchemist", count: 1 },
+      { img: "buildings/Multistory_House.webp", desc: "1x Mehrgeschossiges Haus bauen", id: "s5_b6", type: "build", buildingId: "multistory_house", count: 1 },
       { img: "icons/hourglass50.png", desc: "1 Stunde warten (Bau-Abschluss)", id: "s5_w2", special: "wait", waitTime: 60 },
       { img: "icons/visit.png", desc: "Siedlung erneut besuchen", id: "s5_v1" }
     ],
@@ -437,11 +437,11 @@ const steps = [
   {
     title: "Schritt 7: MilitÃ¤r & Vorräte-Boost",
     buildings: [
-      { img: "buildings/tannery.webp", desc: "3x Gerberei abreißen", id: "s7_a1", special: "sell", type: "sell", buildingId: "tannery", count: 3 },
-      { img: "buildings/catapultcamp.webp", desc: "1x Katapult-Camp bauen", id: "s7_b1", type: "build", buildingId: "catapultcamp", count: 1 },
-      { img: "icons/catapult.webp", desc: "3x 10 Katapult rekrutieren", id: "s7_p1" },
-      { img: "buildings/catapultcamp.webp", desc: "1x Katapult-Camp abreißen", id: "s7_a2", special: "sell", type: "sell", buildingId: "catapultcamp", count: 1 },
-      { img: "buildings/alchemist.webp", desc: "5x Alchemistenlabor bauen", id: "s7_b2", type: "build", buildingId: "alchemist", count: 5 },
+      { img: "buildings/Tannery.webp", desc: "3x Gerberei abreißen", id: "s7_a1", special: "sell", type: "sell", buildingId: "tannery", count: 3 },
+      { img: "buildings/Catapultcamp.webp", desc: "1x Katapult-Camp bauen", id: "s7_b1", type: "build", buildingId: "catapultcamp", count: 1 },
+      { img: "icons/Catapult.webp", desc: "3x 10 Katapult rekrutieren", id: "s7_p1" },
+      { img: "buildings/Catapultcamp.webp", desc: "1x Katapult-Camp abreißen", id: "s7_a2", special: "sell", type: "sell", buildingId: "catapultcamp", count: 1 },
+      { img: "buildings/Alchemist.webp", desc: "5x Alchemistenlabor bauen", id: "s7_b2", type: "build", buildingId: "alchemist", count: 5 },
       { img: "icons/hourglass50.png", desc: "1 Stunde warten (Vorräte)", id: "s7_w1", special: "wait", waitTime: 60 },
       { img: "icons/visit.png", desc: "Siedlung erneut besuchen", id: "s7_v1" }
     ],
@@ -450,12 +450,12 @@ const steps = [
   {
     title: "Schritt 8: Platz schaffen & Expansion",
     buildings: [
-      { img: "buildings/marketplace.webp", desc: "1x Marktplatz abreißen", id: "s8_a1", special: "sell", type: "sell", buildingId: "marketplace", count: 1 },
-      { img: "buildings/church.webp", desc: "1x Kirche abreißen", id: "s8_a2", special: "sell", type: "sell", buildingId: "church", count: 1 },
-      { img: "buildings/tannery.webp", desc: "1x Gerberei abreißen", id: "s8_a3", special: "sell", type: "sell", buildingId: "tannery", count: 1 },
-      { img: "buildings/pillory.webp", desc: "1x Pranger bauen", id: "s8_b1", type: "build", buildingId: "pillory", count: 1 },
-      { img: "buildings/frame_house.webp", desc: "2x Fachwerkhaus bauen", id: "s8_b2", type: "build", buildingId: "frame_house", count: 2 },
-      { img: "buildings/alchemist.webp", desc: "2x Alchemistenlabor bauen", id: "s8_b3", type: "build", buildingId: "alchemist", count: 2 },
+      { img: "buildings/Marketplace.webp", desc: "1x Marktplatz abreißen", id: "s8_a1", special: "sell", type: "sell", buildingId: "marketplace", count: 1 },
+      { img: "buildings/Church.webp", desc: "1x Kirche abreißen", id: "s8_a2", special: "sell", type: "sell", buildingId: "church", count: 1 },
+      { img: "buildings/Tannery.webp", desc: "1x Gerberei abreißen", id: "s8_a3", special: "sell", type: "sell", buildingId: "tannery", count: 1 },
+      { img: "buildings/Pillory.webp", desc: "1x Pranger bauen", id: "s8_b1", type: "build", buildingId: "pillory", count: 1 },
+      { img: "buildings/Frame_House.webp", desc: "2x Fachwerkhaus bauen", id: "s8_b2", type: "build", buildingId: "frame_house", count: 2 },
+      { img: "buildings/Alchemist.webp", desc: "2x Alchemistenlabor bauen", id: "s8_b3", type: "build", buildingId: "alchemist", count: 2 },
       { img: "icons/hourglass50.png", desc: "1 Stunde warten (Produktion)", id: "s8_w1", special: "wait", waitTime: 60 },
       { img: "icons/visit.png", desc: "Siedlung erneut besuchen", id: "s8_v1" }
     ],
@@ -464,18 +464,18 @@ const steps = [
   {
     title: "Schritt 9: Großer Umbau & Güter-Schub",
     buildings: [
-      { img: "buildings/church.webp", desc: "2x Kirche abreißen", id: "s9_a1", special: "sell", type: "sell", buildingId: "church", count: 2 },
-      { img: "buildings/brewery.webp", desc: "1x Brauerei abreißen", id: "s9_a2", special: "sell", type: "sell", buildingId: "brewery", count: 1 },
-      { img: "buildings/ropery.webp", desc: "1x Seilerei bauen", id: "s9_b1", type: "build", buildingId: "ropery", count: 1 },
+      { img: "buildings/Church.webp", desc: "2x Kirche abreißen", id: "s9_a1", special: "sell", type: "sell", buildingId: "church", count: 2 },
+      { img: "buildings/Brewery.webp", desc: "1x Brauerei abreißen", id: "s9_a2", special: "sell", type: "sell", buildingId: "brewery", count: 1 },
+      { img: "buildings/Ropery.webp", desc: "1x Seilerei bauen", id: "s9_b1", type: "build", buildingId: "ropery", count: 1 },
       { img: "icons/hourglass50.png", desc: "1 Stunde warten (Produktion)", id: "s9_w1", special: "wait", waitTime: 60 },
-      { img: "icons/ropery.webp", desc: "6x 20 Güter produzieren", id: "s9_p1" },
+      { img: "icons/Ropery.webp", desc: "6x 20 Güter produzieren", id: "s9_p1" },
       { img: "buildings/expansion.webp", desc: "1x Erweiterung kaufen (Güter)", id: "s9_b2", type: "build", buildingId: "expansion", count: 1 },
-      { img: "buildings/ropery.webp", desc: "1x Seilerei abreißen", id: "s9_a3", special: "sell", type: "sell", buildingId: "ropery", count: 1 },
-      { img: "buildings/mansion.webp", desc: "2x Herrenhaus abreißen", id: "s9_a4", special: "sell", type: "sell", buildingId: "mansion", count: 2 },
-      { img: "buildings/estate_house.webp", desc: "3x Guthaus bauen", id: "s9_b3", type: "build", buildingId: "estate_house", count: 3 },
-      { img: "buildings/frame_house.webp", desc: "2x Fachwerkhaus bauen", id: "s9_b4", type: "build", buildingId: "frame_house", count: 2 },
-      { img: "buildings/alchemist.webp", desc: "5x Alchemistenlabor bauen", id: "s9_b5", type: "build", buildingId: "alchemist", count: 5 },
-      { img: "buildings/pillory.webp", desc: "1x Pranger bauen", id: "s9_b6", type: "build", buildingId: "pillory", count: 1 },
+      { img: "buildings/Ropery.webp", desc: "1x Seilerei abreißen", id: "s9_a3", special: "sell", type: "sell", buildingId: "ropery", count: 1 },
+      { img: "buildings/Mansion.webp", desc: "2x Herrenhaus abreißen", id: "s9_a4", special: "sell", type: "sell", buildingId: "mansion", count: 2 },
+      { img: "buildings/Estate_House.webp", desc: "3x Guthaus bauen", id: "s9_b3", type: "build", buildingId: "estate_house", count: 3 },
+      { img: "buildings/Frame_House.webp", desc: "2x Fachwerkhaus bauen", id: "s9_b4", type: "build", buildingId: "frame_house", count: 2 },
+      { img: "buildings/Alchemist.webp", desc: "5x Alchemistenlabor bauen", id: "s9_b5", type: "build", buildingId: "alchemist", count: 5 },
+      { img: "buildings/Pillory.webp", desc: "1x Pranger bauen", id: "s9_b6", type: "build", buildingId: "pillory", count: 1 },
       { img: "icons/hourglass50.png", desc: "1 Stunde warten (Vorbereitung)", id: "s9_w2", special: "wait", waitTime: 60 },
       { img: "icons/visit.png", desc: "Siedlung erneut besuchen", id: "s9_v1" }
     ],
@@ -484,109 +484,109 @@ const steps = [
   {
     title: "Schritt 10: Militär-Zyklus & Expansion",
     buildings: [
-      { img: "buildings/multistory_house.webp", desc: "1x Mehrgeschossiges Haus abreißen", id: "s10_a1", special: "sell", type: "sell", buildingId: "multistory_house", count: 1 },
-      { img: "buildings/church.webp", desc: "3x Kirche abreißen", id: "s10_a2", special: "sell", type: "sell", buildingId: "church", count: 3 },
-      { img: "buildings/trebuchet_camp.webp", desc: "1x Bliden-Camp bauen", id: "s10_b1", type: "build", buildingId: "trebuchet_camp", count: 1 },
+      { img: "buildings/Multistory_House.webp", desc: "1x Mehrgeschossiges Haus abreißen", id: "s10_a1", special: "sell", type: "sell", buildingId: "multistory_house", count: 1 },
+      { img: "buildings/Church.webp", desc: "3x Kirche abreißen", id: "s10_a2", special: "sell", type: "sell", buildingId: "church", count: 3 },
+      { img: "buildings/Trebuchet_Camp.webp", desc: "1x Bliden-Camp bauen", id: "s10_b1", type: "build", buildingId: "trebuchet_camp", count: 1 },
       { img: "icons/hourglass50.png", desc: "1 Stunde warten", id: "s10_w1", special: "wait", waitTime: 60 },
-      { img: "icons/trebuchet.webp", desc: "3x 10 Bliden rekrutieren", id: "s10_p1" },
-      { img: "buildings/trebuchet_camp.webp", desc: "1x Bliden-Camp abreißen", id: "s10_a3", special: "sell", type: "sell", buildingId: "trebuchet_camp", count: 1 },
-      { img: "buildings/clapboard_house.webp", desc: "1x Schindelhaus bauen", id: "s10_b2", type: "build", buildingId: "clapboard_house", count: 1 },
-      { img: "buildings/bakery.webp", desc: "1x Bäckerei bauen (Bau beschleunigen)", id: "s10_b3", type: "build", buildingId: "bakery", count: 1 },
-      { img: "buildings/brewery.webp", desc: "1x Brauerei bauen (Bau beschleunigen)", id: "s10_b4", type: "build", buildingId: "brewery", count: 1 },
-      { img: "buildings/pillory.webp", desc: "1x Pranger bauen", id: "s10_b5", type: "build", buildingId: "pillory", count: 1 }
+      { img: "icons/Trebuchet.webp", desc: "3x 10 Bliden rekrutieren", id: "s10_p1" },
+      { img: "buildings/Trebuchet_Camp.webp", desc: "1x Bliden-Camp abreißen", id: "s10_a3", special: "sell", type: "sell", buildingId: "trebuchet_camp", count: 1 },
+      { img: "buildings/Clapboard_House.webp", desc: "1x Schindelhaus bauen", id: "s10_b2", type: "build", buildingId: "clapboard_house", count: 1 },
+      { img: "buildings/Bakery.webp", desc: "1x Bäckerei bauen (Bau beschleunigen)", id: "s10_b3", type: "build", buildingId: "bakery", count: 1 },
+      { img: "buildings/Brewery.webp", desc: "1x Brauerei bauen (Bau beschleunigen)", id: "s10_b4", type: "build", buildingId: "brewery", count: 1 },
+      { img: "buildings/Pillory.webp", desc: "1x Pranger bauen", id: "s10_b5", type: "build", buildingId: "pillory", count: 1 }
     ],
     plans: ["steps/step10_1.jpg", "steps/step10_2.jpg"]
   },
   {
     title: "Schritt 11: Güter-Schub & Urbanisierung",
     buildings: [
-      { img: "buildings/brewery.webp", desc: "1x Brauerei abreißen", id: "s11_a1", special: "sell", type: "sell", buildingId: "brewery", count: 1 },
-      { img: "buildings/church.webp", desc: "1x Kirche abreißen", id: "s11_a2", special: "sell", type: "sell", buildingId: "church", count: 1 },
-      { img: "buildings/ropery.webp", desc: "1x Seilerei bauen", id: "s11_b1", type: "build", buildingId: "ropery", count: 1 },
+      { img: "buildings/Brewery.webp", desc: "1x Brauerei abreißen", id: "s11_a1", special: "sell", type: "sell", buildingId: "brewery", count: 1 },
+      { img: "buildings/Church.webp", desc: "1x Kirche abreißen", id: "s11_a2", special: "sell", type: "sell", buildingId: "church", count: 1 },
+      { img: "buildings/Ropery.webp", desc: "1x Seilerei bauen", id: "s11_b1", type: "build", buildingId: "ropery", count: 1 },
       { img: "icons/hourglass50.png", desc: "1 Std. warten (od. beschleunigen)", id: "s11_w1", special: "wait", waitTime: 60 },
-      { img: "icons/ropery.webp", desc: "9x 20 Güter produzieren", id: "s11_p1" },
+      { img: "icons/Ropery.webp", desc: "9x 20 Güter produzieren", id: "s11_p1" },
       { img: "buildings/expansion.webp", desc: "1x Erweiterung kaufen", id: "s11_b2", type: "build", buildingId: "expansion", count: 1 },
-      { img: "buildings/ropery.webp", desc: "1x Seilerei abreißen", id: "s11_a3", special: "sell", type: "sell", buildingId: "ropery", count: 1 },
-      { img: "buildings/clapboard_house.webp", desc: "1x Schindelhaus bauen", id: "s11_b3", type: "build", buildingId: "clapboard_house", count: 1 },
-      { img: "buildings/estate_house.webp", desc: "2x Gutshaus bauen", id: "s11_b4", type: "build", buildingId: "estate_house", count: 2 },
-      { img: "buildings/bakery.webp", desc: "1x Bäckerei bauen", id: "s11_b5", type: "build", buildingId: "bakery", count: 1 },
-      { img: "buildings/pillory.webp", desc: "1x Pranger bauen", id: "s11_b6", type: "build", buildingId: "pillory", count: 1 },
-      { img: "buildings/signpost.webp", desc: "5x Wegweiser / Wasserspeier bauen", id: "s11_b7", type: "build", buildingId: "signpost", count: 5 }
+      { img: "buildings/Ropery.webp", desc: "1x Seilerei abreißen", id: "s11_a3", special: "sell", type: "sell", buildingId: "ropery", count: 1 },
+      { img: "buildings/Clapboard_House.webp", desc: "1x Schindelhaus bauen", id: "s11_b3", type: "build", buildingId: "clapboard_house", count: 1 },
+      { img: "buildings/Estate_House.webp", desc: "2x Gutshaus bauen", id: "s11_b4", type: "build", buildingId: "estate_house", count: 2 },
+      { img: "buildings/Bakery.webp", desc: "1x Bäckerei bauen", id: "s11_b5", type: "build", buildingId: "bakery", count: 1 },
+      { img: "buildings/Pillory.webp", desc: "1x Pranger bauen", id: "s11_b6", type: "build", buildingId: "pillory", count: 1 },
+      { img: "buildings/Signpost.webp", desc: "5x Wegweiser / Wasserspeier bauen", id: "s11_b7", type: "build", buildingId: "signpost", count: 5 }
     ],
     plans: ["steps/step11_1.jpg", "steps/step11_2.jpg"]
   },
   {
     title: "Schritt 12: Güter-Maximierung & Expansion",
     buildings: [
-      { img: "buildings/multistory_house.webp", desc: "2x Mehrgeschossiges Haus abreißen", id: "s12_a1", special: "sell", type: "sell", buildingId: "multistory_house", count: 2 },
-      { img: "buildings/ropery.webp", desc: "1x Seilerei bauen", id: "s12_b1", type: "build", buildingId: "ropery", count: 1 },
+      { img: "buildings/Multistory_House.webp", desc: "2x Mehrgeschossiges Haus abreißen", id: "s12_a1", special: "sell", type: "sell", buildingId: "multistory_house", count: 2 },
+      { img: "buildings/Ropery.webp", desc: "1x Seilerei bauen", id: "s12_b1", type: "build", buildingId: "ropery", count: 1 },
       { img: "icons/hourglass50.png", desc: "1 Std. warten (od. beschleunigen)", id: "s12_w1", special: "wait", waitTime: 60 },
-      { img: "icons/ropery.webp", desc: "12x 20 Güter produzieren", id: "s12_p1" },
+      { img: "icons/Ropery.webp", desc: "12x 20 Güter produzieren", id: "s12_p1" },
       { img: "buildings/expansion.webp", desc: "1x Erweiterung kaufen", id: "s12_b2", type: "build", buildingId: "expansion", count: 1 },
-      { img: "buildings/ropery.webp", desc: "1x Seilerei abreißen", id: "s12_a2", special: "sell", type: "sell", buildingId: "ropery", count: 1 },
-      { img: "buildings/clapboard_house.webp", desc: "1x Schindelhaus bauen", id: "s12_b3", type: "build", buildingId: "clapboard_house", count: 1 },
-      { img: "buildings/estate_house.webp", desc: "1x Gutshaus bauen", id: "s12_b4", type: "build", buildingId: "estate_house", count: 1 },
-      { img: "buildings/bakery.webp", desc: "1x Bäckerei bauen", id: "s12_b5", type: "build", buildingId: "bakery", count: 1 },
-      { img: "buildings/pillory.webp", desc: "1x Pranger bauen", id: "s12_b6", type: "build", buildingId: "pillory", count: 1 },
-      { img: "buildings/signpost.webp", desc: "1x Wegweiser / Wasserspeier bauen", id: "s12_b7", type: "build", buildingId: "signpost", count: 1 }
+      { img: "buildings/Ropery.webp", desc: "1x Seilerei abreißen", id: "s12_a2", special: "sell", type: "sell", buildingId: "ropery", count: 1 },
+      { img: "buildings/Clapboard_House.webp", desc: "1x Schindelhaus bauen", id: "s12_b3", type: "build", buildingId: "clapboard_house", count: 1 },
+      { img: "buildings/Estate_House.webp", desc: "1x Gutshaus bauen", id: "s12_b4", type: "build", buildingId: "estate_house", count: 1 },
+      { img: "buildings/Bakery.webp", desc: "1x Bäckerei bauen", id: "s12_b5", type: "build", buildingId: "bakery", count: 1 },
+      { img: "buildings/Pillory.webp", desc: "1x Pranger bauen", id: "s12_b6", type: "build", buildingId: "pillory", count: 1 },
+      { img: "buildings/Signpost.webp", desc: "1x Wegweiser / Wasserspeier bauen", id: "s12_b7", type: "build", buildingId: "signpost", count: 1 }
     ],
     plans: ["steps/step12_1.jpg", "steps/step12_2.jpg"]
   },
   {
     title: "Schritt 13: Rekrutierung & Güter-Power",
     buildings: [
-      { img: "buildings/multistory_house.webp", desc: "1x Mehrgeschossiges Haus abreißen", id: "s13_a1", special: "sell", type: "sell", buildingId: "multistory_house", count: 1 },
-      { img: "buildings/estate_house.webp", desc: "1x Gutshaus abreißen", id: "s13_a2", special: "sell", type: "sell", buildingId: "estate_house", count: 1 },
-      { img: "buildings/ropery.webp", desc: "1x Seilerei bauen", id: "s13_b1", type: "build", buildingId: "ropery", count: 1 },
+      { img: "buildings/Multistory_House.webp", desc: "1x Mehrgeschossiges Haus abreißen", id: "s13_a1", special: "sell", type: "sell", buildingId: "multistory_house", count: 1 },
+      { img: "buildings/Estate_House.webp", desc: "1x Gutshaus abreißen", id: "s13_a2", special: "sell", type: "sell", buildingId: "estate_house", count: 1 },
+      { img: "buildings/Ropery.webp", desc: "1x Seilerei bauen", id: "s13_b1", type: "build", buildingId: "ropery", count: 1 },
       { img: "icons/hourglass50.png", desc: "1 Std. warten (Güter)", id: "s13_w1", special: "wait", waitTime: 60 },
-      { img: "icons/ropery.webp", desc: "16x 20 Güter produzieren", id: "s13_p1" },
+      { img: "icons/Ropery.webp", desc: "16x 20 Güter produzieren", id: "s13_p1" },
       { img: "buildings/expansion.webp", desc: "1x Erweiterung kaufen", id: "s13_b2", type: "build", buildingId: "expansion", count: 1 },
-      { img: "buildings/ropery.webp", desc: "1x Seilerei abreißen", id: "s13_a3", special: "sell", type: "sell", buildingId: "ropery", count: 1 },
-      { img: "buildings/clapboard_house.webp", desc: "3x Schindelhaus bauen", id: "s13_b3", type: "build", buildingId: "clapboard_house", count: 3 },
-      { img: "buildings/signpost.webp", desc: "1x Wegweiser / Wasserspeier bauen", id: "s13_b4", type: "build", buildingId: "signpost", count: 1 },
-      { img: "buildings/trebuchet_camp.webp", desc: "1x Bliden-Camp bauen", id: "s13_b5", type: "build", buildingId: "trebuchet_camp", count: 1 }
+      { img: "buildings/Ropery.webp", desc: "1x Seilerei abreißen", id: "s13_a3", special: "sell", type: "sell", buildingId: "ropery", count: 1 },
+      { img: "buildings/Clapboard_House.webp", desc: "3x Schindelhaus bauen", id: "s13_b3", type: "build", buildingId: "clapboard_house", count: 3 },
+      { img: "buildings/Signpost.webp", desc: "1x Wegweiser / Wasserspeier bauen", id: "s13_b4", type: "build", buildingId: "signpost", count: 1 },
+      { img: "buildings/Trebuchet_Camp.webp", desc: "1x Bliden-Camp bauen", id: "s13_b5", type: "build", buildingId: "trebuchet_camp", count: 1 }
     ],
     plans: ["steps/step13_1.jpg", "steps/step13_2.jpg"]
   },
   {
     title: "Schritt 14: Euphorie-Maximierung",
     buildings: [
-      { img: "icons/trebuchet.webp", desc: "5x 10 Bliden rekrutieren", id: "s13_p2" },
-      { img: "buildings/estate_house.webp", desc: "12x Gutshaus abreißen", id: "s14_a1", special: "sell", type: "sell", buildingId: "estate_house", count: 12 },
-      { img: "buildings/pillory.webp", desc: "8x Pranger bauen", id: "s14_b1", type: "build", buildingId: "pillory", count: 8 },
-      { img: "buildings/signpost.webp", desc: "8x Wegweiser / Wasserspeier bauen", id: "s14_b2", type: "build", buildingId: "signpost", count: 8 }
+      { img: "icons/Trebuchet.webp", desc: "5x 10 Bliden rekrutieren", id: "s13_p2" },
+      { img: "buildings/Estate_House.webp", desc: "12x Gutshaus abreißen", id: "s14_a1", special: "sell", type: "sell", buildingId: "estate_house", count: 12 },
+      { img: "buildings/Pillory.webp", desc: "8x Pranger bauen", id: "s14_b1", type: "build", buildingId: "pillory", count: 8 },
+      { img: "buildings/Signpost.webp", desc: "8x Wegweiser / Wasserspeier bauen", id: "s14_b2", type: "build", buildingId: "signpost", count: 8 }
     ],
     plans: ["steps/step14.jpg"]
   },
   {
     title: "Schritt 15: Dekomaximierung & Platzoptimierung",
     buildings: [
-      { img: "buildings/gallows.webp", desc: "3x Galgen abreißen", id: "s15_a1", special: "sell", type: "sell", buildingId: "gallows", count: 3 },
-      { img: "buildings/pillory.webp", desc: "3x Pranger bauen", id: "s15_b1", type: "build", buildingId: "pillory", count: 3 },
-      { img: "buildings/signpost.webp", desc: "9x Wegweiser / Wasserspeier bauen", id: "s15_b2", type: "build", buildingId: "signpost", count: 9 }
+      { img: "buildings/Gallows.webp", desc: "3x Galgen abreißen", id: "s15_a1", special: "sell", type: "sell", buildingId: "gallows", count: 3 },
+      { img: "buildings/Pillory.webp", desc: "3x Pranger bauen", id: "s15_b1", type: "build", buildingId: "pillory", count: 3 },
+      { img: "buildings/Signpost.webp", desc: "9x Wegweiser / Wasserspeier bauen", id: "s15_b2", type: "build", buildingId: "signpost", count: 9 }
     ],
     plans: ["steps/step15.jpg"]
   },
   {
     title: "Schritt 16: Finaler Umbau & Artillerie",
     buildings: [
-      { img: "buildings/frame_house.webp", desc: "1x Fachwerkhaus abreißen", id: "s16_a1", special: "sell", type: "sell", buildingId: "frame_house", count: 1 },
-      { img: "buildings/brewery.webp", desc: "4x Brauerei abreißen", id: "s16_a2", special: "sell", type: "sell", buildingId: "brewery", count: 4 },
-      { img: "buildings/trebuchet_camp.webp", desc: "1x Bliden-Camp abreißen", id: "s16_a3", special: "sell", type: "sell", buildingId: "trebuchet_camp", count: 1 },
-      { img: "buildings/pillory.webp", desc: "8x Pranger bauen", id: "s16_b1", type: "build", buildingId: "pillory", count: 8 },
-      { img: "buildings/signpost.webp", desc: "8x Wegweiser / Wasserspeier bauen", id: "s16_b2", type: "build", buildingId: "signpost", count: 8 },
-      { img: "buildings/cannon_camp.webp", desc: "1x Kanonen-Camp bauen", id: "s16_b3", type: "build", buildingId: "cannon_camp", count: 1 }
+      { img: "buildings/Frame_House.webp", desc: "1x Fachwerkhaus abreißen", id: "s16_a1", special: "sell", type: "sell", buildingId: "frame_house", count: 1 },
+      { img: "buildings/Brewery.webp", desc: "4x Brauerei abreißen", id: "s16_a2", special: "sell", type: "sell", buildingId: "brewery", count: 4 },
+      { img: "buildings/Trebuchet_Camp.webp", desc: "1x Bliden-Camp abreißen", id: "s16_a3", special: "sell", type: "sell", buildingId: "trebuchet_camp", count: 1 },
+      { img: "buildings/Pillory.webp", desc: "8x Pranger bauen", id: "s16_b1", type: "build", buildingId: "pillory", count: 8 },
+      { img: "buildings/Signpost.webp", desc: "8x Wegweiser / Wasserspeier bauen", id: "s16_b2", type: "build", buildingId: "signpost", count: 8 },
+      { img: "buildings/Cannon_camp.webp", desc: "1x Kanonen-Camp bauen", id: "s16_b3", type: "build", buildingId: "cannon_camp", count: 1 }
     ],
     plans: ["steps/step16.jpg"]
   },
   {
     title: "Schritt 17: Endlos-Optimierung",
     buildings: [
-      { img: "buildings/alchemist.webp", desc: "Alchemisten nach Bedarf abreißen", id: "s17_a1", special: "sell", type: "sell", buildingId: "alchemist", count: 0 },
-      { img: "buildings/frame_house.webp", desc: "Fachwerkhäuser nach Bedarf abreißen", id: "s17_a2", special: "sell", type: "sell", buildingId: "frame_house", count: 0 },
-      { img: "buildings/pillory.webp", desc: "Pranger bauen (für mehr Aktionspunkte/h)", id: "s17_b1", type: "build", buildingId: "pillory", count: 0 },
-      { img: "buildings/signpost.webp", desc: "Wegweiser für mehr Kampfkraft bauen", id: "s17_b2", type: "build", buildingId: "signpost", count: 0 },
-      { img: "icons/cannon.webp", desc: "Kanonen rekrutieren & nachbauen", id: "s17_p1" },
+      { img: "buildings/Alchemist.webp", desc: "Alchemisten nach Bedarf abreißen", id: "s17_a1", special: "sell", type: "sell", buildingId: "alchemist", count: 0 },
+      { img: "buildings/Frame_House.webp", desc: "Fachwerkhäuser nach Bedarf abreißen", id: "s17_a2", special: "sell", type: "sell", buildingId: "frame_house", count: 0 },
+      { img: "buildings/Pillory.webp", desc: "Pranger bauen (für mehr Aktionspunkte/h)", id: "s17_b1", type: "build", buildingId: "pillory", count: 0 },
+      { img: "buildings/Signpost.webp", desc: "Wegweiser für mehr Kampfkraft bauen", id: "s17_b2", type: "build", buildingId: "signpost", count: 0 },
+      { img: "icons/Cannon.webp", desc: "Kanonen rekrutieren & nachbauen", id: "s17_p1" },
       { img: "icons/reward.png", desc: "Regelmäßig ernten & Sektoren angreifen", id: "s17_v1" }
     ]
   },
@@ -1275,7 +1275,7 @@ function renderStep(scrollBehavior = 'preserve') {
       harvestDiv.innerHTML = `
          <div class="harvest-header">Zu erwartende Ernte:</div>
          <div class="harvest-stats">
-             <span title="Ernte (+ Rückgewinnung aus Abriss)"><img src="icons/münzen.webp"> ${formatWithRefund(harvest.coins, harvest.refund.coins)}</span>
+             <span title="Ernte (+ Rückgewinnung aus Abriss)"><img src="icons/Münzen.webp"> ${formatWithRefund(harvest.coins, harvest.refund.coins)}</span>
              <span title="Ernte (+ Rückgewinnung aus Abriss)"><img src="icons/Vorrat.webp"> ${formatWithRefund(harvest.supplies, harvest.refund.supplies)}</span>
              <span title="Ernte (+ Rückgewinnung aus Abriss)"><img src="icons/legierung.png"> ${formatWithRefund(harvest.alloys, harvest.refund.alloys)}</span>
              <span title="Aktionen:\n${harvest.actionBreakdown.join('\n')}"><img src="icons/action_points.webp"> +${harvest.actions}/h</span>
@@ -1384,9 +1384,9 @@ function showInfoPopup() {
         <div style="text-align: left; margin-bottom: 25px; font-size: 1rem;">
             <strong style="display:block; margin-bottom:10px; color: var(--text-color);">Bevorzugte Gütergebäude:</strong>
             <div style="display: flex; gap: 12px; margin-bottom: 8px; justify-content: center;">
-                <img src="buildings/beekeeper.webp" style="width:50px; height:50px; border-radius:6px; border: 1px solid var(--border-color);">
-                <img src="buildings/ropery.webp" style="width:50px; height:50px; border-radius:6px; border: 1px solid var(--border-color);">
-                <img src="buildings/gunpowder.webp" style="width:50px; height:50px; border-radius:6px; border: 1px solid var(--border-color);">
+                <img src="buildings/Beekeeper.webp" style="width:50px; height:50px; border-radius:6px; border: 1px solid var(--border-color);">
+                <img src="buildings/Ropery.webp" style="width:50px; height:50px; border-radius:6px; border: 1px solid var(--border-color);">
+                <img src="buildings/Gunpowder.webp" style="width:50px; height:50px; border-radius:6px; border: 1px solid var(--border-color);">
             </div>
             <div style="text-align: center; color: #aaa; font-size: 0.9rem;">Imker / Seilerei / Schießpulver-Manufaktur</div>
         </div>
@@ -1394,9 +1394,9 @@ function showInfoPopup() {
         <div style="text-align: left; margin-bottom: 25px; font-size: 1rem;">
             <strong style="display:block; margin-bottom:10px; color: var(--text-color);">Bevorzugte Militärgebäude:</strong>
             <div style="display: flex; gap: 12px; margin-bottom: 8px; justify-content: center;">
-                <img src="buildings/catapultcamp.webp" style="width:50px; height:50px; border-radius:6px; border: 1px solid var(--border-color);">
-                <img src="buildings/trebuchet_camp.webp" style="width:50px; height:50px; border-radius:6px; border: 1px solid var(--border-color);">
-                <img src="buildings/cannon_camp.webp" style="width:50px; height:50px; border-radius:6px; border: 1px solid var(--border-color);">
+                <img src="buildings/Catapultcamp.webp" style="width:50px; height:50px; border-radius:6px; border: 1px solid var(--border-color);">
+                <img src="buildings/Trebuchet_Camp.webp" style="width:50px; height:50px; border-radius:6px; border: 1px solid var(--border-color);">
+                <img src="buildings/Cannon_camp.webp" style="width:50px; height:50px; border-radius:6px; border: 1px solid var(--border-color);">
             </div>
             <div style="display: flex; align-items: center; gap: 8px; justify-content: center; color: #aaa; font-size: 0.9rem;">
                  Artillerie-Gebäude <img src="icons/ArtillerieEinheit.webp" style="width:24px; height:24px;">
@@ -1562,30 +1562,30 @@ function importState(code) {
 
 // === MANUELLE AUSWAHL HELPER ===
 const buildingImages = {
-  "multistory_house": "buildings/multistory_house.webp",
-  "frame_house": "buildings/frame_house.webp",
-  "clapboard_house": "buildings/clapboard_house.webp",
-  "mansion": "buildings/mansion.webp",
-  "estate_house": "buildings/estate_house.webp",
-  "tannery": "buildings/tannery.webp",
-  "bakery": "buildings/bakery.webp",
-  "alchemist": "buildings/alchemist.webp",
-  "windmill": "buildings/windmill.webp",
-  "brewery": "buildings/brewery.webp",
-  "spice_trader": "icons/reward.png",
-  "cooperage": "icons/reward.png",
-  "beekeeper": "buildings/beekeeper.webp",
-  "gunpowder": "buildings/gunpowder.webp",
-  "ropery": "buildings/ropery.webp",
-  "brickworks": "buildings/brickworks.webp",
-  "church": "buildings/church.webp",
-  "gallows": "buildings/gallows.webp",
-  "pillory": "buildings/pillory.webp",
-  "marketplace": "buildings/marketplace.webp",
-  "signpost": "buildings/signpost.webp",
-  "catapultcamp": "buildings/catapultcamp.webp",
-  "trebuchet_camp": "buildings/trebuchet_camp.webp",
-  "cannon_camp": "buildings/cannon_camp.webp"
+  "multistory_house": "buildings/Multistory_House.webp",
+  "frame_house": "buildings/Frame_House.webp",
+  "clapboard_house": "buildings/Clapboard_House.webp",
+  "mansion": "buildings/Mansion.webp",
+  "estate_house": "buildings/Estate_House.webp",
+  "tannery": "buildings/Tannery.webp",
+  "bakery": "buildings/Bakery.webp",
+  "alchemist": "buildings/Alchemist.webp",
+  "windmill": "buildings/Windmill.webp",
+  "brewery": "buildings/Brewery.webp",
+  "spice_trader": "buildings/Spice_Trader.webp",
+  "cooperage": "buildings/Barrelproducer.webp",
+  "beekeeper": "buildings/Beekeeper.webp",
+  "gunpowder": "buildings/Gunpowder.webp",
+  "ropery": "buildings/Ropery.webp",
+  "brickworks": "buildings/Beekeeper.webp", // Fallback für Ziegelei
+  "church": "buildings/Church.webp",
+  "gallows": "buildings/Gallows.webp",
+  "pillory": "buildings/Pillory.webp",
+  "marketplace": "buildings/Marketplace.webp",
+  "signpost": "buildings/Signpost.webp",
+  "catapultcamp": "buildings/Catapultcamp.webp",
+  "trebuchet_camp": "buildings/Trebuchet_Camp.webp",
+  "cannon_camp": "buildings/Cannon_camp.webp"
 };
 
 function createManualRow(stepIdx, slotIdx) {

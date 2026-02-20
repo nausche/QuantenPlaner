@@ -1524,6 +1524,7 @@ function showSyncModal() {
     box.value = code;
 
     // QR Code URL (using State in URL)
+    // WICHTIG: Nutze die .io URL (GitHub Pages), damit der Browser die Seite anzeigt und nicht den Code!
     let baseUrl = "https://nausche.github.io/QuantenPlaner/panel.html";
     if (window.location.protocol.startsWith('http')) {
       baseUrl = window.location.href.split('#')[0];

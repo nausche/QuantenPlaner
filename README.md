@@ -1,7 +1,7 @@
 ============================================================
            QUANTUM-PLANER - FORGE OF EMPIRES
 ============================================================
-Version: 1.5
+Version: 1.6
 Kategorie: Interaktiver Guide & Utility
 ============================================================
 
@@ -14,7 +14,24 @@ und fehlerfrei umzusetzen.
 CHANGELOG / VERSIONSHISTORIE
 ------------------------------------------------------------
 
-### NEU IN VERSION 1.5
+### NEU IN VERSION 1.6
+* MOBIL-SYNCHRONISIERUNG (QR-CODE):
+  Transferiere deine Stadtplanung mit einem Scan auf dein Handy.
+  Ideal zum Ernten und Kämpfen von unterwegs!
+* HYBRID-WEB-SUPPORT:
+  Die App läuft nun sowohl als Chrome-Erweiterung als auch als 
+  standalone Webseite (z.B. auf GitHub Pages).
+* UNIVERSAL STORAGE WRAPPER:
+  Nahtlose Nutzung von Chrome Storage (PC) und LocalStorage 
+  (Handy) für konsistente Datenhaltung.
+* AUTO-IMPORT VIA DEEP-LINKING:
+  Ein Klick auf den Sync-Link (via QR) lädt sofort deinen 
+  aktuellen Fortschritt in den mobilen Browser.
+* DYNAMISCHE QR-CODE GENERIERUNG:
+  Erzeugt automatisch Codes passend zu deiner GitHub-URL für 
+  ein perfektes Zusammenspiel der Geräte.
+
+### FEATURES AUS VERSION 1.5
 * INTELLIGENTE MANUELLE AUSWAHL (1:1 PROPAGATION):
   Gebäude in manuellen Slots werden nun 1:1 in alle folgenden 
   Schritte übernommen. Einmal planen – die ganze Saison nutzen!

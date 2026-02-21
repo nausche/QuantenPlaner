@@ -25,6 +25,9 @@ CHANGELOG / VERSIONSHISTORIE
 * QUICK-SYNC QR:
   Der QR-Code dient nun als schneller Link-Verteiler, um den Planer 
   unverzüglich auf dem Handy zu öffnen.
+* UI-OPTIMIERUNG:
+  Das Desktop-Sidepanel wurde verbreitert (420px) und die manuellen 
+  Gebäude-Dropdowns für eine bessere Lesbarkeit korrigiert.
 * HYBRID DESKTOP SIDEPANEL:
   Auf Desktop-PCs dockt die App nun automatisch als Sidepanel am rechten 
   Bildschirmrand an. Der restliche Bereich wird durch ein atmosphärisches 

@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Quantum-Planer</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <div id="desktop-bg"></div>
+  <div id="desktop-ambient">
+    <div class="ambient-content">
+      <img src="icon128.png" alt="Logo" class="ambient-logo">
+      <h2>QUANTUM-PLANER</h2>
+      <p>Dein taktischer Begleiter für die Quanten-Invasionen.</p>
+      <div class="ambient-hint">Der Planer befindet sich im Sidepanel auf der rechten Seite &rarr;</div>
+    </div>
+  </div>
   <div id="app">
     <header>
-        <div class="header-top">
-          <h1>QUANTUM-PLANER</h1>
-          <button id="sync-btn" title="Mobil-Synchronisierung">📱</button>
-        </div>
-        <select id="step-select"></select> </header>
+      <div class="header-top">
+        <h1>QUANTUM-PLANER</h1>
+        <button id="sync-btn" title="Mobil-Synchronisierung">📱</button>
+      </div>
+      <select id="step-select"></select>
+    </header>
 
     <div id="step-content"></div>
 
@@ -29,22 +41,42 @@
     <div class="modal-content sync-content">
       <span class="modal-close" id="sync-close">&times;</span>
       <h3>Mobil-Synchronisierung</h3>
-      
-      <div class="sync-section">
-        <p>Scanne diesen Code mit deinem Handy, um deine aktuelle Stadtplanung unterwegs zu sehen:</p>
-        <div id="qrcode-container">
-          <img id="qrcode-img" src="" alt="QR Code">
+
+      <div id="sync-tabs">
+        <button class="tab-btn active" data-tab="mobile">Handy-Sync</button>
+        <button class="tab-btn" data-tab="sideview">Side-View (PC)</button>
+      </div>
+
+      <div id="tab-mobile" class="tab-pane active">
+        <div class="sync-section">
+          <p>Scanne diesen Code mit deinem Handy, um deine aktuelle Stadtplanung unterwegs zu sehen:</p>
+          <div id="qrcode-container">
+            <img id="qrcode-img" src="" alt="QR Code">
+          </div>
+        </div>
+
+        <div class="sync-divider"><span>ODER</span></div>
+
+        <div class="sync-section">
+          <p>Manueller Export/Import Code:</p>
+          <textarea id="sync-data-box" readonly></textarea>
+          <div class="sync-btns">
+            <button id="copy-sync-btn">📋 Code kopieren</button>
+            <button id="import-sync-btn">📥 Code importieren</button>
+          </div>
         </div>
       </div>
 
-      <div class="sync-divider"><span>ODER</span></div>
-
-      <div class="sync-section">
-        <p>Manueller Export/Import Code:</p>
-        <textarea id="sync-data-box" readonly></textarea>
-        <div class="sync-btns">
-          <button id="copy-sync-btn">📋 Code kopieren</button>
-          <button id="import-sync-btn">📥 Code importieren</button>
+      <div id="tab-sideview" class="tab-pane">
+        <div class="sync-section">
+          <p>Nutze den Planer direkt <b>im Spiel-Tab</b> (Forge of Empires) als Side-View:</p>
+          <div class="bookmarklet-tip">
+            1. Ziehe diesen Button in deine Lesezeichen-Leiste:<br>
+            <a id="bookmarklet-link" href="#" onclick="return false;" class="bookmarklet-btn">QP Side-View</a>
+          </div>
+          <p style="font-size: 0.7rem; margin-top: 15px; opacity: 0.7;">
+            Oder klicke im Spiel auf das Lesezeichen, um den Planer ein-/auszublenden.
+          </p>
         </div>
       </div>
     </div>
@@ -53,9 +85,11 @@
   <script src="panel.js"></script>
   <div id="back-to-top" class="hidden">▲</div>
   <style>
-  #app {
-    padding-bottom: 80px; /* Erhöht, damit der letzte Content-Block frei liegt */
-  }
-</style>
+    #app {
+      padding-bottom: 80px;
+      /* Erhöht, damit der letzte Content-Block frei liegt */
+    }
+  </style>
 </body>
+
 </html>

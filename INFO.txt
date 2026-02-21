@@ -1,7 +1,7 @@
 ============================================================
            QUANTUM-PLANER - FORGE OF EMPIRES
 ============================================================
-Version: 1.6
+Version: 1.8
 Kategorie: Interaktiver Guide & Utility
 ============================================================
 
@@ -14,7 +14,23 @@ und fehlerfrei umzusetzen. Basiert auf der Anleitung von Linnun FOE.
 CHANGELOG / VERSIONSHISTORIE
 ------------------------------------------------------------
 
-### NEU IN VERSION 1.6
+### NEU IN VERSION 1.8
+* SIDE-VIEW BOOKMARKLET (BILD-IM-BILD):
+  Nutze den Planer direkt im Tab von Forge of Empires. Über das neue Sync-Menü 
+  kann ein Button einfach in die Lesezeichenleiste gezogen werden.
+* TAB-SYSTEM IM SYNC-MODAL:
+  Übersichtliche Trennung zwischen Handy-Synchronisierung und PC-Side-View.
+* HYBRID DESKTOP SIDEPANEL:
+  Auf Desktop-PCs dockt die App nun automatisch als Sidepanel am rechten 
+  Bildschirmrand an. Der restliche Bereich wird durch ein atmosphärisches 
+  Ambiente-Layout ergänzt.
+* OPTIMIERTES MOBILE-UI:
+  Auf Handys wird automatisch die Vollbild-Web-Ansicht genutzt. Das Layout 
+  skaliert perfekt auf jede Displaygröße.
+* VIEWPORT-FIX:
+  Verhindert unerwünschtes Zoomen auf mobilen Geräten für eine stabilere Bedienung.
+
+### FEATURES AUS VERSION 1.6
 * MOBIL-SYNCHRONISIERUNG (QR-CODE):
   Transferiere deine Stadtplanung mit einem Scan auf dein Handy.
   Ideal zum Ernten und Kämpfen von unterwegs!

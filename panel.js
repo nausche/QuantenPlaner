@@ -1487,6 +1487,25 @@ document.addEventListener('DOMContentLoaded', () => {
     syncModal.onclick = (e) => { if (e.target === syncModal) syncModal.classList.add('hidden'); };
   }
 
+  // Tab Logic for Sync Modal
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.onclick = () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const pane = document.getElementById(`tab-${btn.dataset.tab}`);
+      if (pane) pane.classList.add('active');
+    };
+  });
+
+  // Bookmarklet Logic
+  const bookmarkletLink = document.getElementById('bookmarklet-link');
+  if (bookmarkletLink) {
+    const baseUrl = window.location.href.split('#')[0];
+    const code = `javascript:(function(){var id='qp-side-view';var ex=document.getElementById(id);if(ex){ex.remove();document.body.style.marginRight='0px';return;}var f=document.createElement('iframe');f.id=id;f.src='${baseUrl}';f.style.cssText='position:fixed;top:0;right:0;width:350px;height:100%;z-index:999999;border:none;box-shadow:-5px 0 20px rgba(0,0,0,0.5);border-left:2px solid #f0d060;';document.body.appendChild(f);document.body.style.marginRight='350px';})();`;
+    bookmarkletLink.href = code;
+  }
+
   const copyBtn = document.getElementById('copy-sync-btn');
   if (copyBtn) {
     copyBtn.onclick = () => {

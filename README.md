@@ -1,20 +1,44 @@
 ============================================================
            QUANTUM-PLANER - FORGE OF EMPIRES
 ============================================================
-Version: 1.6
+Version: 1.9
 Kategorie: Interaktiver Guide & Utility
 ============================================================
 
 Dieses Tool ist eine interaktive Schritt-für-Schritt-Anleitung 
 für die Quanten-Invasionen (QI) in Forge of Empires. 
 Es hilft dabei, den optimalen Aufbau der Siedlung effizient 
-und fehlerfrei umzusetzen.
+und fehlerfrei umzusetzen. Basiert auf der Anleitung von Linnun FOE.
 
 ------------------------------------------------------------
 CHANGELOG / VERSIONSHISTORIE
 ------------------------------------------------------------
 
-### NEU IN VERSION 1.6
+### NEU IN VERSION 1.9
+* SMART DEVICE SELECTION:
+  Beim ersten Start wird nun direkt gefragt, ob die mobile Ansicht (Vollbild) 
+  oder die Desktop-Ansicht (Side-View) genutzt werden soll.
+* LOCAL-ONLY PRIVACY:
+  Der Fortschritt wird nun ausschließlich lokal auf dem jeweiligen Gerät 
+  gespeichert. Die fehleranfällige Code-Synchronisation wurde für maximale 
+  Datensicherheit und Einfachheit entfernt.
+* QUICK-SYNC QR:
+  Der QR-Code dient nun als schneller Link-Verteiler, um den Planer 
+  unverzüglich auf dem Handy zu öffnen.
+* UI-OPTIMIERUNG:
+  Das Desktop-Sidepanel wurde verbreitert (420px) und die manuellen 
+  Gebäude-Dropdowns für eine bessere Lesbarkeit korrigiert.
+* HYBRID DESKTOP SIDEPANEL:
+  Auf Desktop-PCs dockt die App nun automatisch als Sidepanel am rechten 
+  Bildschirmrand an. Der restliche Bereich wird durch ein atmosphärisches 
+  Ambiente-Layout ergänzt.
+* OPTIMIERTES MOBILE-UI:
+  Auf Handys wird automatisch die Vollbild-Web-Ansicht genutzt. Das Layout 
+  skaliert perfekt auf jede Displaygröße.
+* VIEWPORT-FIX:
+  Verhindert unerwünschtes Zoomen auf mobilen Geräten für eine stabilere Bedienung.
+
+### FEATURES AUS VERSION 1.6
 * MOBIL-SYNCHRONISIERUNG (QR-CODE):
   Transferiere deine Stadtplanung mit einem Scan auf dein Handy.
   Ideal zum Ernten und Kämpfen von unterwegs!

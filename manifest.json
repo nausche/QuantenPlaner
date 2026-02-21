@@ -12,7 +12,7 @@
     "default_title": "Quantum-Planer öffnen"
   },
   "side_panel": {
-    "default_path": "panel.html"
+    "default_path": "index.html"
   },
   "background": {
     "service_worker": "background.js"

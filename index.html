@@ -37,33 +37,36 @@
     <img class="modal-content" id="full-image">
   </div>
 
+  <div id="choice-modal" class="modal">
+    <div class="modal-content choice-content">
+      <img src="icon128.png" alt="Logo" class="choice-logo">
+      <h3>Willkommen beim Quantum-Planer</h3>
+      <p>Wie möchtest du den Planer nutzen?</p>
+      <div class="choice-btns">
+        <button id="set-mobile-btn">📱 Mobil / Vollbild</button>
+        <button id="set-desktop-btn">💻 Desktop Side-View</button>
+      </div>
+    </div>
+  </div>
+
   <div id="sync-modal" class="modal hidden">
     <div class="modal-content sync-content">
       <span class="modal-close" id="sync-close">&times;</span>
-      <h3>Mobil-Synchronisierung</h3>
+      <h3>Optionen & Hilfe</h3>
 
       <div id="sync-tabs">
-        <button class="tab-btn active" data-tab="mobile">Handy-Sync</button>
+        <button class="tab-btn active" data-tab="mobile">Handy-Link</button>
         <button class="tab-btn" data-tab="sideview">Side-View (PC)</button>
       </div>
 
       <div id="tab-mobile" class="tab-pane active">
         <div class="sync-section">
-          <p>Scanne diesen Code mit deinem Handy, um deine aktuelle Stadtplanung unterwegs zu sehen:</p>
+          <p>Scanne diesen Code mit deinem Handy, um den Planer dort zu öffnen:</p>
           <div id="qrcode-container">
             <img id="qrcode-img" src="" alt="QR Code">
           </div>
-        </div>
-
-        <div class="sync-divider"><span>ODER</span></div>
-
-        <div class="sync-section">
-          <p>Manueller Export/Import Code:</p>
-          <textarea id="sync-data-box" readonly></textarea>
-          <div class="sync-btns">
-            <button id="copy-sync-btn">📋 Code kopieren</button>
-            <button id="import-sync-btn">📥 Code importieren</button>
-          </div>
+          <p style="font-size: 0.75rem; opacity: 0.7; margin-top: 10px;">Der Fortschritt wird jeweils nur lokal auf dem
+            Gerät gespeichert.</p>
         </div>
       </div>
 
@@ -75,9 +78,13 @@
             <a id="bookmarklet-link" href="#" onclick="return false;" class="bookmarklet-btn">QP Side-View</a>
           </div>
           <p style="font-size: 0.7rem; margin-top: 15px; opacity: 0.7;">
-            Oder klicke im Spiel auf das Lesezeichen, um den Planer ein-/auszublenden.
+            Klicke im Spiel auf das Lesezeichen, um den Planer ein-/auszublenden.
           </p>
         </div>
+      </div>
+
+      <div class="sync-footer">
+        <button id="reset-mode-btn" class="danger" style="width:100%; font-size:0.7rem;">Ansichts-Modus ändern</button>
       </div>
     </div>
   </div>

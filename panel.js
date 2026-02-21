@@ -878,27 +878,24 @@ const activeIntervals = {};
 
 // === INITIALISIERUNG ===
 function initializeApp() {
-  // Check for auto-import from URL hash (e.g. for mobile view)
-  const hash = window.location.hash;
-  if (hash.startsWith('#data=')) {
-    const code = hash.substring(6);
-    // Remove hash so it doesn't trigger again on reload
-    history.replaceState(null, null, ' ');
-    setTimeout(() => importState(code), 500);
-    return;
-  }
+  // Theme & Mode beim Start laden
+  storage.get(['theme', 'qi_current_page', 'manual_selections', 'device_mode'], (data) => {
+    // 1. Theme
+    if (data.theme === 'light') document.body.classList.add('light-mode');
 
-  // Theme beim Start laden
-  storage.get(['theme', 'qi_current_page', 'manual_selections'], (data) => {
-    if (data.theme === 'light') {
-      document.body.classList.add('light-mode');
+    // 2. Device Mode (PC vs. Mobil)
+    const choiceModal = document.getElementById('choice-modal');
+    if (typeof chrome === 'undefined' && !data.device_mode) {
+      if (choiceModal) choiceModal.classList.remove('hidden');
+    } else {
+      if (choiceModal) choiceModal.classList.add('hidden');
+      if (data.device_mode) document.body.classList.add(`mode-${data.device_mode}`);
     }
-    if (data.qi_current_page !== undefined) {
-      currentIndex = data.qi_current_page;
-    }
-    if (data.manual_selections) {
-      manualSelections = data.manual_selections;
-    }
+
+    // 3. App State
+    if (data.qi_current_page !== undefined) currentIndex = data.qi_current_page;
+    if (data.manual_selections) manualSelections = data.manual_selections;
+
     setupDropdown();
     renderStep();
   });
@@ -1506,22 +1503,28 @@ document.addEventListener('DOMContentLoaded', () => {
     bookmarkletLink.href = code;
   }
 
-  const copyBtn = document.getElementById('copy-sync-btn');
-  if (copyBtn) {
-    copyBtn.onclick = () => {
-      const box = document.getElementById('sync-data-box');
-      box.select();
-      document.execCommand('copy');
-      copyBtn.innerText = "✅ Kopiert!";
-      setTimeout(() => copyBtn.innerText = "📋 Code kopieren", 2000);
-    };
-  }
+  // Choice Modal Logic
+  const setMobileBtn = document.getElementById('set-mobile-btn');
+  const setDesktopBtn = document.getElementById('set-desktop-btn');
+  const choiceModal = document.getElementById('choice-modal');
 
-  const importBtn = document.getElementById('import-sync-btn');
-  if (importBtn) {
-    importBtn.onclick = () => {
-      const code = prompt("Füge hier den Export-Code ein:");
-      if (code) importState(code);
+  const setMode = (mode) => {
+    storage.set({ 'device_mode': mode }, () => {
+      document.body.className = document.body.className.replace(/mode-\w+/g, '');
+      document.body.classList.add(`mode-${mode}`);
+      if (choiceModal) choiceModal.classList.add('hidden');
+    });
+  };
+
+  if (setMobileBtn) setMobileBtn.onclick = () => setMode('mobile');
+  if (setDesktopBtn) setDesktopBtn.onclick = () => setMode('desktop');
+
+  const resetModeBtn = document.getElementById('reset-mode-btn');
+  if (resetModeBtn) {
+    resetModeBtn.onclick = () => {
+      if (confirm("Möchtest du die Ansicht wirklich ändern? Die Seite wird neu geladen.")) {
+        storage.remove('device_mode', () => location.reload());
+      }
     };
   }
 });
@@ -1529,48 +1532,12 @@ document.addEventListener('DOMContentLoaded', () => {
 function showSyncModal() {
   const syncModal = document.getElementById('sync-modal');
   const qrImg = document.getElementById('qrcode-img');
-  const box = document.getElementById('sync-data-box');
+  const baseUrl = window.location.href.split('#')[0];
 
-  storage.get(null, (allData) => {
-    const exportObj = {
-      v: "1.6",
-      page: currentIndex,
-      manual: manualSelections,
-      calc: allData[CALC_STORAGE_KEY],
-      done: allData.done_list
-    };
-    const code = btoa(JSON.stringify(exportObj));
-    box.value = code;
-
-    // QR Code URL (using State in URL)
-    const baseUrl = window.location.href.split('#')[0];
-    const viewerUrl = `${baseUrl}#data=${code}`;
-    qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(viewerUrl)}`;
-
-    syncModal.classList.remove('hidden');
-  });
-}
-
-function importState(code) {
-  try {
-    const data = JSON.parse(atob(code));
-    if (confirm("Möchtest du diesen Stand importieren? Aktuelle Daten werden überschrieben.")) {
-      const updates = {};
-      if (data.page !== undefined) currentIndex = data.page;
-      if (data.manual) manualSelections = data.manual;
-
-      updates['qi_current_page'] = currentIndex;
-      updates['manual_selections'] = manualSelections;
-      if (data.calc) updates[CALC_STORAGE_KEY] = data.calc;
-      if (data.done) updates['done_list'] = data.done;
-
-      storage.set(updates, () => {
-        location.reload();
-      });
-    }
-  } catch (e) {
-    alert("Ungültiger Code! Bitte stelle sicher, dass du den kompletten Text kopiert hast.");
+  if (qrImg) {
+    qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(baseUrl)}`;
   }
+  if (syncModal) syncModal.classList.remove('hidden');
 }
 
 // NAVIGATION BUTTONS REMOVED - NOW DYNAMICALLY IN RENDERSTEP

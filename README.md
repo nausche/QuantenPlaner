@@ -118,13 +118,30 @@ BEWÄHRTE FUNKTIONEN
    Dropdown-Menü oder die "Nächster Schritt"-Buttons.
 
 ------------------------------------------------------------
-INSTALLATION
+## 🛠 INSTALLATION & NUTZUNG
 ------------------------------------------------------------
 
-1. Entpacke das ZIP-Archiv in einen Ordner.
-2. Öffne Google Chrome -> 'chrome://extensions/'.
-3. Aktiviere den "Entwicklermodus".
-4. Klicke auf "Entpackte Erweiterung laden" und wähle den Ordner.
+Du kannst den Quantum-Planer auf drei Arten nutzen:
 
+### 1. Als Webseite (Empfohlen für Browser & Handy)
+Öffne einfach deine GitHub Pages URL (z.B. `https://nausche.github.io/QuantenPlaner/`).
+*   **Am PC:** Wähle beim Start "Desktop Side-View", um den Planer platzsparend am Rand zu nutzen.
+*   **Am Handy / Tablet:** Wähle "Mobil / Vollbild". Tipp: Nutze die "Zum Home-Bildschirm hinzufügen" Funktion deines Browsers für ein App-Gefühl.
+
+### 2. Als Side-View direkt im Spiel (Bild-im-Bild)
+1.  Öffne den Planer im Browser.
+2.  Klicke auf das **Handy-Icon (📱)** oben rechts.
+3.  Wähle den Tab **"Side-View (PC)"**.
+4.  Ziehe den goldenen **"QP Side-View"** Button in deine Lesezeichen-Leiste.
+5.  Öffne nun *Forge of Empires* und klicke auf das Lesezeichen, um den Planer ein- oder auszublenden.
+
+### 3. Als Chrome-Erweiterung (Lokal)
+1.  Lade das Repository herunter und entpacke es.
+2.  Öffne in Chrome `chrome://extensions/`.
+3.  Aktiviere oben rechts den **Entwicklermodus**.
+4.  Klicke auf **"Entpackte Erweiterung laden"** und wähle den Ordner aus.
+5.  Pinne die Erweiterung in deiner Toolbar, um sie jederzeit im echten Chrome-Sidepanel zu öffnen.
+
+---
 Viel Erfolg bei den Invasionen!
 ============================================================

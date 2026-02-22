@@ -1039,7 +1039,23 @@ function renderStep(scrollBehavior = 'preserve') {
     });
 
     introDiv.innerHTML = `
+            <div id="sideview-promo" class="promo-box">
+                <div class="promo-header">
+                    <span>💻 PC Side-View Anleitung</span>
+                    <button id="toggle-promo" class="promo-toggle-btn">▼</button>
+                </div>
+                <div id="promo-content" class="promo-body">
+                    <p>Nutze den Planer direkt <b>im Spiel-Tab</b> als Sidepanel:</p>
+                    <div class="bookmarklet-tip">
+                        1. Ziehe diesen Button in deine Lesezeichen-Leiste:<br>
+                        <a id="intro-bookmarklet-link" href="#" onclick="return false;" class="bookmarklet-btn">QP Side-View</a>
+                    </div>
+                    <p style="font-size: 0.7rem; opacity: 0.7;">Klicke im Spiel auf das Lesezeichen zum Ein-/Ausblenden.</p>
+                </div>
+            </div>
+
             <h1>${step.title}</h1>
+
             <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; overflow-y: auto; width: 100%;">
                 ${buildingHtml}
             </div>
@@ -1086,6 +1102,35 @@ function renderStep(scrollBehavior = 'preserve') {
         }
       };
     });
+
+    // Side-View Promo Toggle & Logic
+    const promoToggle = document.getElementById('toggle-promo');
+    const promoContent = document.getElementById('promo-content');
+    const sideviewPromo = document.getElementById('sideview-promo');
+
+    storage.get(['intro_sideview_collapsed'], (data) => {
+      if (data.intro_sideview_collapsed) {
+        promoContent.classList.add('collapsed');
+        promoToggle.innerText = '▶';
+        sideviewPromo.classList.add('is-collapsed');
+      }
+    });
+
+    promoToggle.onclick = () => {
+      const isCollapsed = promoContent.classList.toggle('collapsed');
+      sideviewPromo.classList.toggle('is-collapsed', isCollapsed);
+      promoToggle.innerText = isCollapsed ? '▶' : '▼';
+      storage.set({ 'intro_sideview_collapsed': isCollapsed });
+    };
+
+    // Bookmarklet Link auf Intro-Page setzen
+    const introBookmarklet = document.getElementById('intro-bookmarklet-link');
+    if (introBookmarklet) {
+      const baseUrl = window.location.href.split('#')[0];
+      const code = `javascript:(function(){var id='qp-side-view';var ex=document.getElementById(id);if(ex){ex.remove();document.body.style.marginRight='0px';return;}var f=document.createElement('iframe');f.id=id;f.src='${baseUrl}';f.style.cssText='position:fixed;top:0;right:0;width:420px;height:100%;z-index:999999;border:none;box-shadow:-5px 0 20px rgba(0,0,0,0.5);border-left:2px solid #f0d060;';document.body.appendChild(f);document.body.style.marginRight='420px';})();`;
+      introBookmarklet.href = code;
+    }
+
     return;
   }
 
@@ -1104,7 +1149,10 @@ function renderStep(scrollBehavior = 'preserve') {
           <h4>📦 VORRÄTE</h4>
           <div class="calc-bonus-row">
             <span>Stadtbonus %:</span>
-            <input type="number" id="calc_bonus_prod" value="${calcState.produktion.stadtbonus || 0}">
+            <div style="display: flex; gap: 5px; align-items: center;">
+              <input type="number" id="calc_bonus_prod" value="${calcState.produktion.stadtbonus || 0}">
+              <button class="paste-btn" data-target="calc_bonus_prod" title="Aus Zwischenablage einfügen">📋</button>
+            </div>
           </div>
           <div id="calc-produktion-container"></div>
           <div id="calc-prod-summary" class="calc-summary"></div>
@@ -1114,7 +1162,10 @@ function renderStep(scrollBehavior = 'preserve') {
           <h4>💰 MÜNZEN</h4>
           <div class="calc-bonus-row">
             <span>Stadtbonus %:</span>
-            <input type="number" id="calc_bonus_wohn" value="${calcState.wohnen.stadtbonus || 0}">
+            <div style="display: flex; gap: 5px; align-items: center;">
+              <input type="number" id="calc_bonus_wohn" value="${calcState.wohnen.stadtbonus || 0}">
+              <button class="paste-btn" data-target="calc_bonus_wohn" title="Aus Zwischenablage einfügen">📋</button>
+            </div>
           </div>
           <div id="calc-wohnen-container"></div>
           <div id="calc-wohn-summary" class="calc-summary"></div>
@@ -1190,6 +1241,26 @@ function renderStep(scrollBehavior = 'preserve') {
           renderStep('top');
         };
       }
+
+      // Paste-Buttons Logik
+      container.querySelectorAll('.paste-btn').forEach(btn => {
+        btn.onclick = async () => {
+          try {
+            const text = await navigator.clipboard.readText();
+            const val = parseInt(text);
+            if (!isNaN(val)) {
+              const targetId = btn.dataset.target;
+              const input = document.getElementById(targetId);
+              if (input) {
+                input.value = val;
+                input.dispatchEvent(new Event('input'));
+              }
+            }
+          } catch (err) {
+            console.error('Fehler beim Auslesen der Zwischenablage:', err);
+          }
+        };
+      });
     });
     return;
   }
@@ -1499,7 +1570,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const bookmarkletLink = document.getElementById('bookmarklet-link');
   if (bookmarkletLink) {
     const baseUrl = window.location.href.split('#')[0];
-    const code = `javascript:(function(){var id='qp-side-view';var ex=document.getElementById(id);if(ex){ex.remove();document.body.style.marginRight='0px';return;}var f=document.createElement('iframe');f.id=id;f.src='${baseUrl}';f.style.cssText='position:fixed;top:0;right:0;width:350px;height:100%;z-index:999999;border:none;box-shadow:-5px 0 20px rgba(0,0,0,0.5);border-left:2px solid #f0d060;';document.body.appendChild(f);document.body.style.marginRight='350px';})();`;
+    const code = `javascript:(function(){var id='qp-side-view';var ex=document.getElementById(id);if(ex){ex.remove();document.body.style.marginRight='0px';return;}var f=document.createElement('iframe');f.id=id;f.src='${baseUrl}';f.style.cssText='position:fixed;top:0;right:0;width:420px;height:100%;z-index:999999;border:none;box-shadow:-5px 0 20px rgba(0,0,0,0.5);border-left:2px solid #f0d060;';document.body.appendChild(f);document.body.style.marginRight='420px';})();`;
     bookmarkletLink.href = code;
   }
 

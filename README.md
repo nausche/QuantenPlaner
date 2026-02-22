@@ -1,7 +1,7 @@
 ============================================================
            QUANTUM-PLANER - FORGE OF EMPIRES
 ============================================================
-Version: 1.9
+Version: 2.1
 Kategorie: Interaktiver Guide & Utility
 ============================================================
 
@@ -14,7 +14,28 @@ und fehlerfrei umzusetzen. Basiert auf der Anleitung von Linnun FOE.
 CHANGELOG / VERSIONSHISTORIE
 ------------------------------------------------------------
 
-### NEU IN VERSION 1.9
+### NEU IN VERSION 2.1
+* SIDE-VIEW PROMO AUF STARTSEITE:
+  Die Anleitung für den PC Side-View wurde für eine bessere Auffindbarkeit direkt 
+  auf die Startseite verschoben.
+* COLLAPSIBLE UI:
+  Die Side-View Anleitung kann nun über einen kleinen Pfeil-Button minimiert werden, 
+  um Platz für die Guide-Auswahl zu sparen. Der Zustand wird dauerhaft gespeichert.
+* ENTSCHLACKTES MODAL:
+  Der Handy-Link (QR-Code) verbleibt exklusiv im Synchronisierungs-Menü, um die 
+  Bedienung zu fokussieren.
+* LAYOUT-OPTIMIERUNG:
+  Die Season-Überschrift wurde unter die Side-View Anleitung verschoben und das 
+  Quanten-Rechner Icon auf der Startseite um 50% verkleinert, um die visuelle 
+  Struktur zu schärfen.
+
+### NEU IN VERSION 2.0
+* UI-FIX DROPDOWNS:
+  Das Dropdown-Menü für die Anzahl manuell zugefügter Gebäude wurde schmaler gestaltet, 
+  um ein Überstehen über den Rahmen (besonders auf schmalen Displays) zu verhindern.
+* KOMFORTFUNKTIONEN:
+  Einführung von "Paste"-Buttons (📋) im Quanten-Rechner, um Bonus-Werte direkt aus 
+  der Zwischenablage einzufügen.
 * SMART DEVICE SELECTION:
   Beim ersten Start wird nun direkt gefragt, ob die mobile Ansicht (Vollbild) 
   oder die Desktop-Ansicht (Side-View) genutzt werden soll.

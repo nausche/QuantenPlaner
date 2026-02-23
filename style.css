@@ -1,4 +1,8 @@
 /* 1. GLOBALE STILE & SCROLLBAR */
+* {
+  box-sizing: border-box;
+}
+
 /* FARB-VARIABLEN */
 :root {
   --bg-color: #121212;
@@ -44,6 +48,7 @@ body {
   position: relative;
   min-height: 100vh;
   background-color: var(--bg-color);
+  overflow-x: hidden;
 }
 
 /* 2. DEVICE MODES & DESKTOP LAYOUT */
@@ -873,6 +878,16 @@ input:checked+.slider:before {
 .manual-row {
   border: 1px dashed var(--header-color);
   background: rgba(240, 208, 96, 0.05);
+  padding: 6px;
+  /* Slightly less padding to save space */
+}
+
+.manual-desc {
+  display: flex !important;
+  gap: 4px;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
 }
 
 .manual-select {
@@ -880,8 +895,9 @@ input:checked+.slider:before {
   color: var(--text-color);
   border: 1px solid var(--border-color);
   border-radius: 4px;
-  padding: 4px;
-  font-size: 0.85rem;
+  padding: 4px 2px;
+  font-size: 0.8rem;
+  max-width: 100%;
 }
 
 .manual-select:focus {
@@ -890,15 +906,16 @@ input:checked+.slider:before {
 }
 
 .building-sel {
-  margin-right: 5px;
+  margin-right: 2px;
   min-width: 0;
-  /* Erlaubt Schrumpfen */
+  flex: 1;
 }
 
 .count-sel {
-  min-width: 45px;
-  width: 45px;
+  min-width: 40px;
+  width: 40px;
   flex-shrink: 0;
+  padding-right: 0;
 }
 
 /* 10. QUANTEN-RECHNER STILE */

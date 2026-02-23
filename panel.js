@@ -1655,10 +1655,7 @@ function createManualRow(stepIdx, slotIdx) {
   img.src = getImg(currentData.buildingId);
 
   const desc = document.createElement('div');
-  desc.className = 'desc';
-  desc.style.display = 'flex';
-  desc.style.gap = '5px'; // Reduced from 8px
-  desc.style.alignItems = 'center';
+  desc.className = 'desc manual-desc';
 
   const bSelect = document.createElement('select');
   bSelect.className = 'manual-select building-sel';

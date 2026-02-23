@@ -1,7 +1,7 @@
 ============================================================
            QUANTUM-PLANER - FORGE OF EMPIRES
 ============================================================
-Version: 2.2
+Version: 2.4
 Kategorie: Interaktiver Guide & Utility
 ============================================================
 
@@ -13,6 +13,17 @@ und fehlerfrei umzusetzen. Basiert auf der Anleitung von Linnun FOE.
 ------------------------------------------------------------
 CHANGELOG / VERSIONSHISTORIE
 ------------------------------------------------------------
+
+### NEU IN VERSION 2.4
+* LAYOUT-FIX MANUELLE AUSWAHL:
+  Das Layout der manuellen Auswahlreihen wurde optimiert. Dropdown-Menüs und der 
+  Löschen-Button (✖) passen nun auch bei schmaleren Ansichten perfekt in den Rahmen.
+* GLOBAL BOX-SIZING:
+  Einführung von `box-sizing: border-box` für alle Elemente, um konsistente Breiten 
+  und Abstände über alle Browser hinweg zu garantieren.
+* UI-FEINSCHLIFF:
+  Abstände und Schriftgrößen in den manuellen Eingabefeldern wurden subtil angepasst, 
+  um den Platz optimal zu nutzen.
 
 ### NEU IN VERSION 2.3
 * PANEL-VERBREITERUNG:

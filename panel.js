@@ -1127,7 +1127,7 @@ function renderStep(scrollBehavior = 'preserve') {
     const introBookmarklet = document.getElementById('intro-bookmarklet-link');
     if (introBookmarklet) {
       const baseUrl = window.location.href.split('#')[0];
-      const code = `javascript:(function(){var id='qp-side-view';var ex=document.getElementById(id);if(ex){ex.remove();document.body.style.marginRight='0px';return;}var f=document.createElement('iframe');f.id=id;f.src='${baseUrl}';f.style.cssText='position:fixed;top:0;right:0;width:420px;height:100%;z-index:999999;border:none;box-shadow:-5px 0 20px rgba(0,0,0,0.5);border-left:2px solid #f0d060;';document.body.appendChild(f);document.body.style.marginRight='420px';})();`;
+      const code = `javascript:(function(){var id='qp-side-view';var ex=document.getElementById(id);if(ex){ex.remove();document.body.style.marginRight='0px';return;}var f=document.createElement('iframe');f.id=id;f.src='${baseUrl}';f.style.cssText='position:fixed;top:0;right:0;width:462px;height:100%;z-index:999999;border:none;box-shadow:-5px 0 20px rgba(0,0,0,0.5);border-left:2px solid #f0d060;';document.body.appendChild(f);document.body.style.marginRight='462px';})();`;
       introBookmarklet.href = code;
     }
 
@@ -1571,7 +1571,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const bookmarkletLink = document.getElementById('bookmarklet-link');
   if (bookmarkletLink) {
     const baseUrl = window.location.href.split('#')[0];
-    const code = `javascript:(function(){var id='qp-side-view';var ex=document.getElementById(id);if(ex){ex.remove();document.body.style.marginRight='0px';return;}var f=document.createElement('iframe');f.id=id;f.src='${baseUrl}';f.style.cssText='position:fixed;top:0;right:0;width:420px;height:100%;z-index:999999;border:none;box-shadow:-5px 0 20px rgba(0,0,0,0.5);border-left:2px solid #f0d060;';document.body.appendChild(f);document.body.style.marginRight='420px';})();`;
+    const code = `javascript:(function(){var id='qp-side-view';var ex=document.getElementById(id);if(ex){ex.remove();document.body.style.marginRight='0px';return;}var f=document.createElement('iframe');f.id=id;f.src='${baseUrl}';f.style.cssText='position:fixed;top:0;right:0;width:462px;height:100%;z-index:999999;border:none;box-shadow:-5px 0 20px rgba(0,0,0,0.5);border-left:2px solid #f0d060;';document.body.appendChild(f);document.body.style.marginRight='462px';})();`;
     bookmarkletLink.href = code;
   }
 

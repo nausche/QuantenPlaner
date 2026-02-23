@@ -39,7 +39,7 @@ body {
 
 #app {
   padding: 10px;
-  max-width: 480px;
+  max-width: 528px;
   margin: 0 auto;
   position: relative;
   min-height: 100vh;
@@ -79,7 +79,7 @@ body.mode-desktop #desktop-ambient {
   position: fixed;
   top: 0;
   left: 0;
-  right: 420px;
+  right: 462px;
   bottom: 0;
   align-items: center;
   justify-content: center;
@@ -94,8 +94,8 @@ body.mode-desktop #app {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 420px;
-  max-width: 420px;
+  width: 462px;
+  max-width: 462px;
   margin: 0;
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
   border-left: 2px solid var(--header-color);

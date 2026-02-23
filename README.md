@@ -14,6 +14,14 @@ und fehlerfrei umzusetzen. Basiert auf der Anleitung von Linnun FOE.
 CHANGELOG / VERSIONSHISTORIE
 ------------------------------------------------------------
 
+### NEU IN VERSION 2.3
+* PANEL-VERBREITERUNG:
+  Das Desktop-Sidepanel wurde um 10% verbreitert (von 420px auf 462px), um eine bessere 
+  Lesbarkeit der Texte und eine großzügigere Darstellung der Gebäude-Icons zu ermöglichen.
+* BOOKMARKLET-UPDATE:
+  Die automatische Side-View Integration (Bookmarklet) wurde ebenfalls auf die neue 
+  Breite angepasst.
+
 ### NEU IN VERSION 2.2
 * WINDOWS UHR INTEGRATION:
   Alle Warte-Timer verfügen nun über einen direkten Link zur "Windows Uhr" App (`ms-clock:`). 
@@ -55,7 +63,7 @@ CHANGELOG / VERSIONSHISTORIE
   Der QR-Code dient nun als schneller Link-Verteiler, um den Planer 
   unverzüglich auf dem Handy zu öffnen.
 * UI-OPTIMIERUNG:
-  Das Desktop-Sidepanel wurde verbreitert (420px) und die manuellen 
+  Das Desktop-Sidepanel wurde verbreitert (ehemals 420px) und die manuellen 
   Gebäude-Dropdowns für eine bessere Lesbarkeit korrigiert.
 * HYBRID DESKTOP SIDEPANEL:
   Auf Desktop-PCs dockt die App nun automatisch als Sidepanel am rechten 

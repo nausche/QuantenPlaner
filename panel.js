@@ -1283,6 +1283,7 @@ function renderStep(scrollBehavior = 'preserve') {
         `<div class="timer-container">
                     <div class="timer-box" id="timer-display-${b.id}">Start Timer</div>
                     <div class="timer-cancel" id="timer-cancel-${b.id}" title="Abbrechen">X</div>
+                    <a href="ms-clock:" class="win-clock-btn" title="Windows Uhr öffnen">🕒 Planer</a>
                  </div>` : "";
 
       card.innerHTML = `<img src="${b.img}"><div class="desc">${b.desc} ${timerHtml}</div>`;

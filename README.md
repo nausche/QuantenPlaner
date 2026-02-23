@@ -1,7 +1,7 @@
 ============================================================
            QUANTUM-PLANER - FORGE OF EMPIRES
 ============================================================
-Version: 2.1
+Version: 2.2
 Kategorie: Interaktiver Guide & Utility
 ============================================================
 
@@ -13,6 +13,14 @@ und fehlerfrei umzusetzen. Basiert auf der Anleitung von Linnun FOE.
 ------------------------------------------------------------
 CHANGELOG / VERSIONSHISTORIE
 ------------------------------------------------------------
+
+### NEU IN VERSION 2.2
+* WINDOWS UHR INTEGRATION:
+  Alle Warte-Timer verfügen nun über einen direkten Link zur "Windows Uhr" App (`ms-clock:`). 
+  Dies ermöglicht das schnelle Setzen von systemweiten Weckern oder Timern parallel zum Planer.
+* PREMIUM UI-LINK:
+  Der Link ist dezent als "🕒 Planer" Button in die Timer-Oberfläche integriert und passt sich 
+  harmonisch dem Design an.
 
 ### NEU IN VERSION 2.1
 * SIDE-VIEW PROMO AUF STARTSEITE:

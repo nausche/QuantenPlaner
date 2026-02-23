@@ -777,6 +777,29 @@ input:checked+.slider:before {
   /* Anzeigen wenn aktiv */
 }
 
+.win-clock-btn {
+  text-decoration: none;
+  font-size: 0.8rem;
+  margin-left: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.win-clock-btn:hover {
+  background: var(--header-color);
+  color: var(--btn-text);
+  border-color: var(--header-color);
+  transform: translateY(-1px);
+}
+
 /* 8. HARVEST INFO */
 .harvest-info {
   margin-top: 10px;

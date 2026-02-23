@@ -1,7 +1,7 @@
 ============================================================
            QUANTUM-PLANER - FORGE OF EMPIRES
 ============================================================
-Version: 2.4
+Version: 2.5
 Kategorie: Interaktiver Guide & Utility
 ============================================================
 
@@ -13,6 +13,11 @@ und fehlerfrei umzusetzen. Basiert auf der Anleitung von Linnun FOE.
 ------------------------------------------------------------
 CHANGELOG / VERSIONSHISTORIE
 ------------------------------------------------------------
+
+### NEU IN VERSION 2.5
+* WOCHENTAG-BASIERTE NUMMERIERUNG:
+  Die Schritt-Titel wurden auf ein Wochentag-System umgestellt (z.B. "1. Donnerstag morgen"), 
+  um die zeitliche Planung innerhalb der Quanten-Saison intuitiver zu gestalten.
 
 ### NEU IN VERSION 2.4
 * LAYOUT-FIX MANUELLE AUSWAHL:

@@ -357,7 +357,7 @@ const steps = [
     intro: true
   },
   {
-    title: "Schritt 1: Basis-Aufbau",
+    title: "1. Donnerstag morgen",
     buildings: [
       { img: "buildings/expansion.webp", desc: "3x Erweiterung kaufen (Quantum-Scherben)", id: "s1_b1", type: "build", buildingId: "expansion", count: 3 },
       { img: "buildings/Multistory_House.webp", desc: "3x Mehrgeschossiges Haus bauen", id: "s1_b2", type: "build", buildingId: "multistory_house", count: 3 },
@@ -369,13 +369,13 @@ const steps = [
     plans: ["steps/step1.jpg"]
   },
   {
-    title: "Schritt 2: Ressourcen-Management",
+    title: "2. Donnerstag abend",
     buildings: [
       { img: "icons/reward.png", desc: "Alle Gebäude ernten", id: "s2_a1" }
     ]
   },
   {
-    title: "Schritt 3: Spezialisierung",
+    title: "3. Freitag morgen",
     buildings: [
       { img: "buildings/Church.webp", desc: "1x Kirche abreißen", id: "s3_a1", special: "sell", type: "sell", buildingId: "church", count: 1 },
       { img: "buildings/Beekeeper.webp", desc: "1x Imkerei bauen", id: "s3_b1", type: "build", buildingId: "beekeeper", count: 1 },
@@ -394,7 +394,7 @@ const steps = [
     id: "s3"
   },
   {
-    title: "Schritt 4: Produktion & Expansion",
+    title: "4. Freitag abend",
     buildings: [
       { img: "buildings/Tannery.webp", desc: "1x Gerberei abreißen", id: "s4_a1", special: "sell", type: "sell", buildingId: "tannery", count: 1 },
       { img: "buildings/Gunpowder.webp", desc: "1x Schießpulver-Manufaktur bauen", id: "s4_b1", type: "build", buildingId: "gunpowder", count: 1 },
@@ -411,7 +411,7 @@ const steps = [
     plans: ["steps/step4_1.jpg", "steps/step4_2.jpg"]
   },
   {
-    title: "Schritt 5: Seilproduktion & Vorbereitung",
+    title: "5. Samstag morgen",
     buildings: [
       { img: "buildings/Marketplace.webp", desc: "1x Marktplatz abreißen", id: "s5_a1", special: "sell", type: "sell", buildingId: "marketplace", count: 1 },
       { img: "buildings/Ropery.webp", desc: "1x Seilerei bauen", id: "s5_b1", type: "build", buildingId: "ropery", count: 1 },
@@ -429,13 +429,13 @@ const steps = [
     plans: ["steps/step5_1.jpg", "steps/step5_2.jpg"]
   },
   {
-    title: "Schritt 6: Ressourcen-Management",
+    title: "6. Samstag abend",
     buildings: [
       { img: "icons/reward.png", desc: "Alle Gebäude ernten", id: "s6_a1" }
     ]
   },
   {
-    title: "Schritt 7: MilitÃ¤r & Vorräte-Boost",
+    title: "7. Sonntag morgen",
     buildings: [
       { img: "buildings/Tannery.webp", desc: "3x Gerberei abreißen", id: "s7_a1", special: "sell", type: "sell", buildingId: "tannery", count: 3 },
       { img: "buildings/Catapultcamp.webp", desc: "1x Katapult-Camp bauen", id: "s7_b1", type: "build", buildingId: "catapultcamp", count: 1 },
@@ -448,7 +448,7 @@ const steps = [
     plans: ["steps/step7_1.jpg", "steps/step7_2.jpg"]
   },
   {
-    title: "Schritt 8: Platz schaffen & Expansion",
+    title: "8. Sonntag abend",
     buildings: [
       { img: "buildings/Marketplace.webp", desc: "1x Marktplatz abreißen", id: "s8_a1", special: "sell", type: "sell", buildingId: "marketplace", count: 1 },
       { img: "buildings/Church.webp", desc: "1x Kirche abreißen", id: "s8_a2", special: "sell", type: "sell", buildingId: "church", count: 1 },
@@ -462,7 +462,7 @@ const steps = [
     plans: ["steps/step8.jpg"]
   },
   {
-    title: "Schritt 9: Großer Umbau & Güter-Schub",
+    title: "9. Montag morgen",
     buildings: [
       { img: "buildings/Church.webp", desc: "2x Kirche abreißen", id: "s9_a1", special: "sell", type: "sell", buildingId: "church", count: 2 },
       { img: "buildings/Brewery.webp", desc: "1x Brauerei abreißen", id: "s9_a2", special: "sell", type: "sell", buildingId: "brewery", count: 1 },
@@ -482,7 +482,7 @@ const steps = [
     plans: ["steps/step9_1.jpg", "steps/step9_2.jpg"]
   },
   {
-    title: "Schritt 10: Militär-Zyklus & Expansion",
+    title: "10. Montag abend",
     buildings: [
       { img: "buildings/Multistory_House.webp", desc: "1x Mehrgeschossiges Haus abreißen", id: "s10_a1", special: "sell", type: "sell", buildingId: "multistory_house", count: 1 },
       { img: "buildings/Church.webp", desc: "3x Kirche abreißen", id: "s10_a2", special: "sell", type: "sell", buildingId: "church", count: 3 },
@@ -498,7 +498,7 @@ const steps = [
     plans: ["steps/step10_1.jpg", "steps/step10_2.jpg"]
   },
   {
-    title: "Schritt 11: Güter-Schub & Urbanisierung",
+    title: "11. Dienstag morgen",
     buildings: [
       { img: "buildings/Brewery.webp", desc: "1x Brauerei abreißen", id: "s11_a1", special: "sell", type: "sell", buildingId: "brewery", count: 1 },
       { img: "buildings/Church.webp", desc: "1x Kirche abreißen", id: "s11_a2", special: "sell", type: "sell", buildingId: "church", count: 1 },
@@ -516,7 +516,7 @@ const steps = [
     plans: ["steps/step11_1.jpg", "steps/step11_2.jpg"]
   },
   {
-    title: "Schritt 12: Güter-Maximierung & Expansion",
+    title: "12. Dienstag abend",
     buildings: [
       { img: "buildings/Multistory_House.webp", desc: "2x Mehrgeschossiges Haus abreißen", id: "s12_a1", special: "sell", type: "sell", buildingId: "multistory_house", count: 2 },
       { img: "buildings/Ropery.webp", desc: "1x Seilerei bauen", id: "s12_b1", type: "build", buildingId: "ropery", count: 1 },
@@ -533,7 +533,7 @@ const steps = [
     plans: ["steps/step12_1.jpg", "steps/step12_2.jpg"]
   },
   {
-    title: "Schritt 13: Rekrutierung & Güter-Power",
+    title: "13. Mittwoch morgen",
     buildings: [
       { img: "buildings/Multistory_House.webp", desc: "1x Mehrgeschossiges Haus abreißen", id: "s13_a1", special: "sell", type: "sell", buildingId: "multistory_house", count: 1 },
       { img: "buildings/Estate_House.webp", desc: "1x Gutshaus abreißen", id: "s13_a2", special: "sell", type: "sell", buildingId: "estate_house", count: 1 },
@@ -549,7 +549,7 @@ const steps = [
     plans: ["steps/step13_1.jpg", "steps/step13_2.jpg"]
   },
   {
-    title: "Schritt 14: Euphorie-Maximierung",
+    title: "14. Mittwoch abend",
     buildings: [
       { img: "icons/Trebuchet.webp", desc: "5x 10 Bliden rekrutieren", id: "s13_p2" },
       { img: "buildings/Estate_House.webp", desc: "12x Gutshaus abreißen", id: "s14_a1", special: "sell", type: "sell", buildingId: "estate_house", count: 12 },
@@ -559,7 +559,7 @@ const steps = [
     plans: ["steps/step14.jpg"]
   },
   {
-    title: "Schritt 15: Dekomaximierung & Platzoptimierung",
+    title: "15. Donnerstag morgen",
     buildings: [
       { img: "buildings/Gallows.webp", desc: "3x Galgen abreißen", id: "s15_a1", special: "sell", type: "sell", buildingId: "gallows", count: 3 },
       { img: "buildings/Pillory.webp", desc: "3x Pranger bauen", id: "s15_b1", type: "build", buildingId: "pillory", count: 3 },
@@ -568,7 +568,7 @@ const steps = [
     plans: ["steps/step15.jpg"]
   },
   {
-    title: "Schritt 16: Finaler Umbau & Artillerie",
+    title: "16. Donnerstag abend",
     buildings: [
       { img: "buildings/Frame_House.webp", desc: "1x Fachwerkhaus abreißen", id: "s16_a1", special: "sell", type: "sell", buildingId: "frame_house", count: 1 },
       { img: "buildings/Brewery.webp", desc: "4x Brauerei abreißen", id: "s16_a2", special: "sell", type: "sell", buildingId: "brewery", count: 4 },
@@ -580,7 +580,7 @@ const steps = [
     plans: ["steps/step16.jpg"]
   },
   {
-    title: "Schritt 17: Endlos-Optimierung",
+    title: "17. Freitag morgen",
     buildings: [
       { img: "buildings/Alchemist.webp", desc: "Alchemisten nach Bedarf abreißen", id: "s17_a1", special: "sell", type: "sell", buildingId: "alchemist", count: 0 },
       { img: "buildings/Frame_House.webp", desc: "Fachwerkhäuser nach Bedarf abreißen", id: "s17_a2", special: "sell", type: "sell", buildingId: "frame_house", count: 0 },

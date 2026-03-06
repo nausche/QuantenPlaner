@@ -1,7 +1,7 @@
 ============================================================
            QUANTUM-PLANER - FORGE OF EMPIRES
 ============================================================
-Version: 2.5
+Version: 2.6
 Kategorie: Interaktiver Guide & Utility
 ============================================================
 
@@ -13,6 +13,12 @@ und fehlerfrei umzusetzen. Basiert auf der Anleitung von Linnun FOE.
 ------------------------------------------------------------
 CHANGELOG / VERSIONSHISTORIE
 ------------------------------------------------------------
+
+### NEU IN VERSION 2.6
+* MOBILE POPUP-FIX (SCROLL & TAP-TO-CLOSE):
+  Popups (wie die Info-Übersicht) sind nun scrollbar, falls sie länger als das Display sind. 
+  Zusätzlich können sie jetzt durch einfaches Tippen an eine beliebige Stelle auf dem Display 
+  geschlossen werden, was die Bedienung auf Mobilgeräten erheblich vereinfacht.
 
 ### NEU IN VERSION 2.5
 * WOCHENTAG-BASIERTE NUMMERIERUNG:

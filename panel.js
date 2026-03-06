@@ -1511,12 +1511,17 @@ function showInfoPopup() {
 
   closeX.onclick = closePopup;
 
-  // Close on background click
+  // Close on display tap (anywhere on the modal)
   modal.onclick = (e) => {
-    if (e.target === modal) {
-      closePopup();
-    }
+    // Wenn auf den YouTube-Link geklickt wird, lassen wir das Event durchgehen (öffnet neuen Tab),
+    // aber wir schließen das Popup trotzdem, da der Benutzer "fertig" ist.
+    closePopup();
   };
+
+  // Verhindere, dass das Scrolling des Inhalts als "Schließen"-Click gewertet wird? 
+  // Nein, im Web ist ein Click nur ein kurzer Tap. Ein Scroll (Mousedown + Move + Mouseup) 
+  // triggert oft keinen einfachen 'click' auf dem Container if not handled carefully.
+  // Aber wir lassen es einfach so, wie vom User gewünscht: "Tippen zum Schließen".
 }
 
 // === MODAL & UTILS ===

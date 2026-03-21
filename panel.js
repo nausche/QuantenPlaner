@@ -490,9 +490,9 @@ const steps = [
       { img: "icons/hourglass50.png", desc: "1 Stunde warten", id: "s10_w1", special: "wait", waitTime: 60 },
       { img: "icons/Trebuchet.webp", desc: "3x 10 Bliden rekrutieren", id: "s10_p1" },
       { img: "buildings/Trebuchet_Camp.webp", desc: "1x Bliden-Camp abreißen", id: "s10_a3", special: "sell", type: "sell", buildingId: "trebuchet_camp", count: 1 },
-      { img: "buildings/Clapboard_House.webp", desc: "1x Schindelhaus bauen", id: "s10_b2", type: "build", buildingId: "clapboard_house", count: 1 },
+      { img: "buildings/Clapboard_House.webp", desc: "1x Schindelhaus bauen (Bau beschleunigen)", id: "s10_b2", type: "build", buildingId: "clapboard_house", count: 1 },
       { img: "buildings/Bakery.webp", desc: "1x Bäckerei bauen (Bau beschleunigen)", id: "s10_b3", type: "build", buildingId: "bakery", count: 1 },
-      { img: "buildings/Brewery.webp", desc: "1x Brauerei bauen (Bau beschleunigen)", id: "s10_b4", type: "build", buildingId: "brewery", count: 1 },
+      { img: "buildings/Brewery.webp", desc: "1x Brauerei bauen", id: "s10_b4", type: "build", buildingId: "brewery", count: 1 },
       { img: "buildings/Pillory.webp", desc: "1x Pranger bauen", id: "s10_b5", type: "build", buildingId: "pillory", count: 1 }
     ],
     plans: ["steps/step10_1.jpg", "steps/step10_2.jpg"]

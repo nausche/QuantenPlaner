@@ -1,4 +1,4 @@
-﻿// === STORAGE WRAPPER FOR EXTENSION & WEB ===
+// === STORAGE WRAPPER FOR EXTENSION & WEB ===
 const storage = {
   get: (keys, cb) => {
     if (typeof chrome !== 'undefined' && chrome.storage && chrome.storage.local) {
@@ -350,8 +350,7 @@ const steps = [
   {
     title: "SEASON",
     buildings: [
-      { img: "buildings/Town_Hall_29.webp", desc: "Mittelalter<br><span style='font-size:0.7em; text-transform:none'>(Minimum)</span>", id: "intro_min" },
-      { img: "buildings/Town_Hall_29.webp", desc: "Mittelalter<br><span style='font-size:0.7em; text-transform:none'>(Fortgeschritten)</span>", id: "intro_adv" },
+      { img: "buildings/Town_Hall_29.webp", desc: "Mittelalter", id: "intro_adv" },
       { img: "icons/calc.png", desc: "Quanten-Rechner", id: "intro_calc" }
     ],
     intro: true
@@ -570,8 +569,8 @@ const steps = [
   {
     title: "16. Donnerstag abend",
     buildings: [
-      { img: "buildings/Frame_House.webp", desc: "1x Fachwerkhaus abreißen", id: "s16_a1", special: "sell", type: "sell", buildingId: "frame_house", count: 1 },
       { img: "buildings/Brewery.webp", desc: "4x Brauerei abreißen", id: "s16_a2", special: "sell", type: "sell", buildingId: "brewery", count: 4 },
+      { img: "buildings/Frame_House.webp", desc: "1x Fachwerkhaus abreißen", id: "s16_a1", special: "sell", type: "sell", buildingId: "frame_house", count: 1 },
       { img: "buildings/Trebuchet_Camp.webp", desc: "1x Bliden-Camp abreißen", id: "s16_a3", special: "sell", type: "sell", buildingId: "trebuchet_camp", count: 1 },
       { img: "buildings/Pillory.webp", desc: "8x Pranger bauen", id: "s16_b1", type: "build", buildingId: "pillory", count: 8 },
       { img: "buildings/Signpost.webp", desc: "8x Wegweiser / Wasserspeier bauen", id: "s16_b2", type: "build", buildingId: "signpost", count: 8 },
@@ -925,7 +924,7 @@ function stopAndRemoveTimer(id) {
   storage.remove(`timer_${id}`, () => {
     const display = document.getElementById(`timer-display-${id}`);
     if (display) {
-      display.innerText = "Start Timer";
+      display.innerText = "ChromeTimer";
       display.classList.remove("timer-active", "timer-done");
     }
   });
@@ -1029,8 +1028,19 @@ function renderStep(scrollBehavior = 'preserve') {
 
     let buildingHtml = "";
     step.buildings.forEach((b) => {
-      buildingHtml += `
-            <div class="intro-group" style="margin-bottom: 25px; text-align: center;">
+      let dividerHtml = '';
+      let extraGroupStyle = '';
+      if (b.id === 'intro_calc') {
+        dividerHtml = `
+            <div style="width: 70%; height: 1px; background: rgba(240, 208, 96, 0.3); margin: 20px auto 30px; position: relative;">
+               <span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--bg-color); padding: 0 10px; color: var(--header-color); font-size: 0.8rem; font-weight: bold;">ODER</span>
+            </div>
+        `;
+        extraGroupStyle = 'margin-top: 10px;';
+      }
+
+      buildingHtml += dividerHtml + `
+            <div class="intro-group" style="margin-bottom: 25px; text-align: center; ${extraGroupStyle}">
                 <button class="start-building-btn" data-id="${b.id}">
                     <img src="${b.img}">
                 </button>
@@ -1056,7 +1066,7 @@ function renderStep(scrollBehavior = 'preserve') {
 
             <h1>${step.title}</h1>
 
-            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; overflow-y: auto; width: 100%;">
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 25px; overflow-y: auto; width: 100%;">
                 ${buildingHtml}
             </div>
             
@@ -1246,16 +1256,35 @@ function renderStep(scrollBehavior = 'preserve') {
       container.querySelectorAll('.paste-btn').forEach(btn => {
         btn.onclick = async () => {
           try {
-            const text = await navigator.clipboard.readText();
-            const val = parseInt(text);
-            if (!isNaN(val)) {
-              const targetId = btn.dataset.target;
-              const input = document.getElementById(targetId);
-              if (input) {
-                input.value = val;
-                input.dispatchEvent(new Event('input'));
+            const targetId = btn.dataset.target;
+            const input = document.getElementById(targetId);
+            if (!input) return;
+
+            try {
+              const items = await navigator.clipboard.read();
+              for (let item of items) {
+                if (item.types.includes('image/png') || item.types.includes('image/jpeg') || item.types.includes('image/webp')) {
+                  const type = item.types.find(t => t.startsWith('image/'));
+                  const blob = await item.getType(type);
+                  const reader = new FileReader();
+                  reader.onload = (e) => {
+                    if (input.type !== 'number') input.value = e.target.result;
+                    input.dispatchEvent(new Event('input'));
+                  };
+                  reader.readAsDataURL(blob);
+                  return;
+                }
               }
+            } catch(e) { /* fallback to text if blob fails */ }
+
+            const text = await navigator.clipboard.readText();
+            if (input.type === 'number') {
+              const val = parseInt(text.replace(/[^\d-]/g, ''));
+              if (!isNaN(val)) input.value = val;
+            } else {
+              input.value = text;
             }
+            input.dispatchEvent(new Event('input'));
           } catch (err) {
             console.error('Fehler beim Auslesen der Zwischenablage:', err);
           }
@@ -1281,9 +1310,9 @@ function renderStep(scrollBehavior = 'preserve') {
 
       let timerHtml = b.special === "wait" ?
         `<div class="timer-container">
-                    <div class="timer-box" id="timer-display-${b.id}">Start Timer</div>
+                    <div class="timer-box" id="timer-display-${b.id}">ChromeTimer</div>
                     <div class="timer-cancel" id="timer-cancel-${b.id}" title="Abbrechen">X</div>
-                    <a href="ms-clock:" class="win-clock-btn" title="Windows Uhr öffnen">🕒 Planer</a>
+                    <a href="ms-clock:" class="win-clock-btn" title="Windows Uhr öffnen">🕒 WindowsTimer</a>
                  </div>` : "";
 
       card.innerHTML = `<img src="${b.img}"><div class="desc">${b.desc} ${timerHtml}</div>`;
@@ -1413,15 +1442,39 @@ function renderStep(scrollBehavior = 'preserve') {
     // 3. Reset Button
     const resetCont = document.createElement('div');
     resetCont.className = 'reset-container';
+    if (currentIndex === 17) {
+      resetCont.style.marginTop = "30px";
+      resetCont.style.padding = "20px";
+      resetCont.style.border = "2px solid rgba(255, 68, 68, 0.4)";
+      resetCont.style.borderRadius = "12px";
+      resetCont.style.backgroundColor = "rgba(255, 68, 68, 0.05)";
+    }
     const resetBtn = document.createElement('button');
     resetBtn.className = 'danger';
     resetBtn.innerText = 'Saison Reset';
+    if (currentIndex === 17) {
+      resetBtn.style.fontSize = "1.2rem";
+      resetBtn.style.padding = "12px 20px";
+      resetBtn.style.width = "100%";
+      resetBtn.style.boxShadow = "0 0 15px rgba(220, 53, 69, 0.4)";
+    }
     resetBtn.onclick = () => {
       if (confirm("Möchtest du wirklich alle Fortschritte dieser Saison löschen?")) {
         storage.clear(() => location.reload());
       }
     };
     resetCont.appendChild(resetBtn);
+    if (currentIndex === 17) {
+      const resetNote = document.createElement('div');
+      resetNote.style.fontSize = "0.9rem";
+      resetNote.style.color = "var(--text-color, #aaa)";
+      resetNote.style.opacity = "0.8";
+      resetNote.style.marginTop = "15px";
+      resetNote.style.textAlign = "center";
+      resetNote.style.lineHeight = "1.4";
+      resetNote.innerText = "RESET setzt alle Button und Eingaben zurück um sauber in die nächste Meisterschaft zu starten";
+      resetCont.appendChild(resetNote);
+    }
     navDiv.appendChild(resetCont);
 
     container.appendChild(navDiv);
@@ -1448,7 +1501,7 @@ function showInfoPopup() {
   modal.className = 'modal';
   modal.innerHTML = `
     <div class="modal-content" style="background: var(--card-bg); padding: 30px; text-align: center; max-width: 90%; width: 400px; position: relative; border: 2px solid var(--header-color); border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
-        <h3 style="color: var(--header-color); margin-top: 0; margin-bottom: 25px; font-size: 1.4rem;">Mittelalter (Fortgeschritten)</h3>
+        <h3 style="color: var(--header-color); margin-top: 0; margin-bottom: 25px; font-size: 1.4rem;">Mittelalter</h3>
         
         <div style="text-align: left; margin-bottom: 25px; font-size: 1rem;">
             <strong style="display:block; margin-bottom:10px; color: var(--text-color);">Bevorzugte Gütergebäude:</strong>
@@ -1476,9 +1529,11 @@ function showInfoPopup() {
             <strong style="color: var(--header-color);">Produktionszeit zwischen den Schritten:</strong><br><span style="font-size: 1.2rem; font-weight: bold;">10 Stunden</span>
         </div>
 
-        <div style="text-align: center; margin-bottom: 20px; font-size: 0.85rem; opacity: 0.7; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
-            Quelle & Video-Anleitung:<br>
-            <a href="https://www.youtube.com/watch?v=B0g2aTwSNCE&t=108s" target="_blank" style="color: var(--header-color); text-decoration: none; font-weight: bold;">Linnun FOE (YouTube)</a>
+        <div style="text-align: center; margin-bottom: 25px; margin-top: 10px; padding: 15px; background: rgba(240, 208, 96, 0.1); border: 1px solid rgba(240, 208, 96, 0.3); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+            <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-color); margin-bottom: 12px; font-weight: bold; letter-spacing: 1px; opacity: 0.8;">📺 Quelle & Video-Anleitung</div>
+            <a href="https://www.youtube.com/watch?v=B0g2aTwSNCE&t=108s" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; color: #111; background: linear-gradient(135deg, #f0d060 0%, #d4a020 100%); padding: 10px 20px; text-decoration: none; font-weight: bold; font-size: 0.95rem; border-radius: 6px; box-shadow: 0 4px 12px rgba(240, 208, 96, 0.3);">
+                ▶ Linnun FOE (YouTube)
+            </a>
         </div>
 
         <div id="popup-close-x" style="

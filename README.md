@@ -14,6 +14,20 @@ und fehlerfrei umzusetzen. Basiert auf der Anleitung von Linnun FOE.
 CHANGELOG / VERSIONSHISTORIE
 ------------------------------------------------------------
 
+### NEU IN VERSION 2.7
+* CLIPBOARD ERWEITERUNG:
+  Die Paste-Buttons (📋) in Eingabefeldern unterstützen nun neben Zahlen auch das Auslesen von Texten, URLs und sogar Bildern aus der Zwischenablage.
+* STARTSEITEN-UPDATE:
+  Die Startseite wurde entschlackt. Der Link zum "Mittelalter (Minimum)" sowie der Textzusatz "(Fortgeschritten)" wurden entfernt. Zudem wurden die verbleibenden Elemente (Mittelalter & Quanten-Rechner) weiter oben platziert und durch einen eleganten Teiler optisch klarer voneinander getrennt.
+* INFO-POPUP REDESIGN:
+  Der Hinweis "(Fortgeschritten)" wurde im Info-Popup der Startseite entfernt. Der Link zur Quellen- und Video-Anleitung (Linnun FOE) wurde in eine hervorgehobene Info-Karte umgewandelt und erstrahlt nun als auffälliger, interaktiver Button.
+* SAISON RESET HIGHLIGHT:
+  Der Saison-Reset-Button am Ende von Schritt 17 wurde optisch hervorgehoben und mit einem klärenden Hinweistext versehen, um einen sauberen Start in die nächste Meisterschaft zu gewährleisten.
+* SCHRITT 16 OPTIMIERUNG:
+  Die Reihenfolge beim Gebäudeabriss in Schritt 16 (Donnerstag abend) wurde angepasst (Brauerei und Fachwerkhaus getauscht).
+* TIMER UMBENENNUNG:
+  Die Buttons innerhalb der "1 Stunde warten" Aktionen wurden zur besseren Differenzierung explizit in "ChromeTimer" und "🕒 WindowsTimer" umbenannt.
+
 ### NEU IN VERSION 2.6
 * MOBILE POPUP-FIX (SCROLL & TAP-TO-CLOSE):
   Popups (wie die Info-Übersicht) sind nun scrollbar, falls sie länger als das Display sind. 
